@@ -11,6 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_toyger_cat"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="301dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="280dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/ic_chao"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="407dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
