@@ -10,4 +10,5 @@
     <string name="lbl_notes">Notas</string>
     <string name="lbl_date">Data</string>
     <string name="lbl_time">Horário</string>
+    <string name="lbl_save_task">Salvar Tarefa</string>
 </resources>
