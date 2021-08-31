@@ -11,6 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_toyger_cat"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="256dp" />
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="301dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
