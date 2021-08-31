@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
+        app:layout_constraintEnd_toStartOf="@+id/tasks_title"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
+        app:layout_constraintStart_toEndOf="@+id/tasks_title"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
@@ -26,13 +47,13 @@
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
         android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/home_toolbar"
         tools:layout_editor_absoluteX="-16dp"
-        tools:listitem="@layout/date_day"
-        />
+        tools:listitem="@layout/date_day" />
 
     <TextView
         android:id="@+id/tasks_title"
@@ -54,7 +75,7 @@
         app:layout_constraintBottom_toTopOf="@+id/initial_button"
         app:layout_constraintTop_toBottomOf="@+id/tasks_title"
         tools:layout_editor_absoluteX="16dp"
-        tools:listitem="@layout/task_layout"/>
+        tools:listitem="@layout/task_layout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/initial_button"
@@ -77,4 +98,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
