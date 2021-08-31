@@ -2,4 +2,6 @@
     <string name="app_name">CatTastk</string>
     <string name="app_title">Cat Task</string>
     <string name="letsgo">Vamos lá</string>
+    <string name="tasks">Tasks</string>
+    <string name="create">Criar</string>
 </resources>
