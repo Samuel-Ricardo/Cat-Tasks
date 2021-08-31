@@ -6,26 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
- <!--   <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"> -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/initial_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="140dp">
 
-    <ImageView
-        android:id="@+id/imageView"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:maxWidth="64dp"
+
+            android:maxHeight="64dp"
+            android:src="@drawable/ic_cat" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style=""
+            android:text="@string/app_title"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/ic_toyger_cat"
-        tools:layout_editor_absoluteX="99dp" />
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/initial_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initial_toolbar">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:srcCompat="@drawable/ic_toyger_cat" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_crescent_moon_128px" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/initial_button"
+        style="@style/Widget.MaterialComponents.Button"
+
+        app:cornerRadius="24dp"
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_crescent_moon_128px"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="183dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
 
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout> -->
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/letsgo"
+        android:textAllCaps="false"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
