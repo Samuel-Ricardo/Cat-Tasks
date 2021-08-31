@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Passear com o Cachorro" />
+        tools:text="Passear com o Gatinho" />
 
     <TextView
         android:id="@+id/task_notes"
@@ -47,7 +47,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_title"
-        tools:text="Levar o Cachorro pra passear e aproveitar pra passar no mercado na volta" />
+        tools:text="@string/desc_example" />
 
     <ImageView
         android:id="@+id/imageView2"

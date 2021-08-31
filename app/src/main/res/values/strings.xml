@@ -4,4 +4,7 @@
     <string name="letsgo">Vamos lá</string>
     <string name="tasks">Tasks</string>
     <string name="create">Criar</string>
+    <string name="desc_example">Levar o Gatinho pra passear e aproveitar pra passar no mercado na volta</string>
+    <string name="create_task">Criar Tarefa</string>
+    <string name="lbl_title">Título</string>
 </resources>
