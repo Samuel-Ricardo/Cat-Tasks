@@ -6,19 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+ <!--   <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"> -->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/ic_toyger_cat"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="316dp" />
+        tools:layout_editor_absoluteX="99dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="280dp"
-        android:layout_height="95dp"
-        app:srcCompat="@drawable/ic_chao"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="407dp" />
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_crescent_moon_128px"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout> -->
 </androidx.constraintlayout.widget.ConstraintLayout>
