@@ -28,11 +28,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            style="@style/title"
+            style="@style/app_title"
             android:text="@string/app_title"
             />
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <TextView
+        android:id="@+id/app_desc"
+        style="@style/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="20dp"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="20dp"
+        android:text="@string/app_desc"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initial_toolbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -42,7 +56,7 @@
         app:layout_constraintBottom_toTopOf="@+id/initial_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/initial_toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/app_desc">
 
 
         <ImageView
