@@ -53,7 +53,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/initial_button"
         app:layout_constraintTop_toBottomOf="@+id/tasks_title"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:listitem="@layout/task_layout"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/initial_button"
