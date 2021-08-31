@@ -7,4 +7,7 @@
     <string name="desc_example">Levar o Gatinho pra passear e aproveitar pra passar no mercado na volta</string>
     <string name="create_task">Criar Tarefa</string>
     <string name="lbl_title">Título</string>
+    <string name="lbl_notes">Notas</string>
+    <string name="lbl_date">Data</string>
+    <string name="lbl_time">Horário</string>
 </resources>
