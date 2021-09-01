@@ -1,10 +1,7 @@
 package com.study.kotlin.cattastk.data.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.interfaces.TasksDAO
 
@@ -19,4 +16,7 @@ interface TaskDAO: TasksDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     override suspend fun insert(task: Task)
+
+    @Update
+    override fun update(task: Task)
 }

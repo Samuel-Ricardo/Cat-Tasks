@@ -10,7 +10,11 @@ class TaskUseCase(
 ) {
 
     fun insert(task: Task) {
-        repository.insert(task)
+        if(exists(task)){
+            repository.update(task)
+        }else{
+            repository.insert(task)
+        }
     }
 
     fun getAll(): LiveData<List<Task>> {
@@ -21,7 +25,6 @@ class TaskUseCase(
 
         val task = repository.select(task.id)
 
-        return task.size > 0;
-
+        return task.value!!.isNotEmpty();
     }
 }

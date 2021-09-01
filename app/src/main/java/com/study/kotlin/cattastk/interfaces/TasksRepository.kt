@@ -8,6 +8,8 @@ interface TasksRepository{
 
     fun insert(task: Task): Job
 
+    fun update(task: Task)
+
     fun select(task_id:Int): LiveData<List<Task>>
 
     fun getAll() : LiveData<List<Task>>

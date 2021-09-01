@@ -10,4 +10,6 @@ interface TasksDAO {
     fun getAll(): LiveData<List<Task>>
 
     suspend fun insert(task: Task)
+
+    fun update(task: Task)
 }
