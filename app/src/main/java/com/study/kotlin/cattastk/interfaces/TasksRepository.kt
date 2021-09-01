@@ -1,13 +1,13 @@
 package com.study.kotlin.cattastk.interfaces
 
 import androidx.lifecycle.LiveData
-import com.study.kotlin.cattastk.data.entity.TaskEntity
+import com.study.kotlin.cattastk.data.entity.Task
 import kotlinx.coroutines.Job
 
 interface TasksRepository {
 
-    fun insert(task: TaskEntity): Job
+    fun insert(task: Task): Job
 
-    fun getAll() : LiveData<List<TaskEntity>>
+    fun getAll() : LiveData<List<Task>>
 
 }

@@ -1,11 +1,11 @@
 package com.study.kotlin.cattastk.interfaces
 
 import androidx.lifecycle.LiveData
-import com.study.kotlin.cattastk.data.entity.TaskEntity
+import com.study.kotlin.cattastk.data.entity.Task
 
 interface TasksDAO {
 
-    fun getAll(): LiveData<List<TaskEntity>>
+    fun getAll(): LiveData<List<Task>>
 
-    suspend fun insert(taskEntity: TaskEntity)
+    suspend fun insert(task: Task)
 }

@@ -4,24 +4,25 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.study.kotlin.cattastk.data.entity.TaskEntity
+import com.study.kotlin.cattastk.data.database.dao.TaskDAO
+import com.study.kotlin.cattastk.data.entity.Task
 
-@Database(entities = [TaskEntity::class], version = 1)
-abstract class DatabaseRoom: RoomDatabase() {
+@Database(entities = [Task::class], version = 1)
+abstract class AppDatabase: RoomDatabase() {
 
-    abstract fun taskDAO(): TaskEntity
+    abstract fun taskDAO(): TaskDAO
 
     companion object{
 
         @Volatile
-        private var INSTANCE: DatabaseRoom? = null
+        private var INSTANCE: AppDatabase? = null
 
-        fun getDatabase(context: Context): DatabaseRoom {
+        fun getDatabase(context: Context): AppDatabase {
 
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    DatabaseRoom::class.java,
+                    AppDatabase::class.java,
                     "task_db"
                 ).build();
 
