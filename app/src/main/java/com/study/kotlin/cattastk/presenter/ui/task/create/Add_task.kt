@@ -1,6 +1,8 @@
 package com.study.kotlin.cattastk.presenter.ui.task.create
 
 import android.Manifest
+import android.app.AlertDialog
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -34,6 +36,12 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setupPermissions() {
+
+        AlertDialog
+            .Builder(this)
+                .setTitle("Armazenamento")
+                .setMessage("Precisamos que você permita o acesso ao armazenamento para poder salvar as Tasks / Tarefas")
+                .show()
 
         ActivityCompat.requestPermissions(
             this,
