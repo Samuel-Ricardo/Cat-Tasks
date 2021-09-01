@@ -6,7 +6,7 @@ import java.time.LocalDate
 import java.time.LocalTime
 
 @Entity
-data class Task (
+data class TaskEntity (
     @PrimaryKey(autoGenerate = true) val id:Int = 0,
     val title:String,
     val notes:String,
