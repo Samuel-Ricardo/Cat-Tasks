@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.domain.TaskUseCase
 
-class MainViewModel (
+class ViewModelMain (
     val taskUseCase: TaskUseCase
 ):ViewModel() {
 
