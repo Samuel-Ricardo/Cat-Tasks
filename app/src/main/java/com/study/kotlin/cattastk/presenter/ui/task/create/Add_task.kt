@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
+import com.google.android.material.textfield.TextInputLayout
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.R
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
+import java.time.LocalDate
 
 
 class add_task : AppCompatActivity() {
@@ -43,10 +45,12 @@ class add_task : AppCompatActivity() {
             id= -1,
             title = textOf(binding.inputTitle),
             notes = textOf(binding.inputNotes),
-            date = textOf(binding.inputDate,
-            time = textOf(binding.inputTime)
+            date = textToLocalDate(textOf(binding.inputDate)),
+            time = textToLocalTime(textOf(binding.inputTime))
         )
     }
+
+    private fun textOf(textInput: TextInputLayout) = textInput.editText?.text.toString()
 
     private fun setupPermissions() {
 
