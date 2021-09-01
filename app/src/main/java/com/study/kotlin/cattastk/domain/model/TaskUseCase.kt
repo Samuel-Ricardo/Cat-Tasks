@@ -15,4 +15,6 @@ class TaskUseCase(
     fun getAll(): LiveData<List<Task>> {
         return taskRepository.getAll()
     }
+
+
 }
