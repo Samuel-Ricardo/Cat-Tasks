@@ -5,16 +5,22 @@ import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.data.repositories.TaskRepository
 
 class TaskUseCase(
-    private val taskRepository: TaskRepository
+    private val repository: TaskRepository
 ) {
 
     fun insert(task: Task) {
-        taskRepository.insert(task)
+        repository.insert(task)
     }
 
     fun getAll(): LiveData<List<Task>> {
-        return taskRepository.getAll()
+        return repository.getAll()
     }
 
+    fun exists(task: Task):Boolean {
 
+        val task = repository.select(task.id)
+
+        return task.size > 0;
+
+    }
 }
