@@ -1,11 +1,13 @@
 package com.study.kotlin.cattastk.presenter.ui.task.create
 
 import android.Manifest
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
@@ -39,6 +41,12 @@ class add_task : AppCompatActivity() {
     private fun setupListener() {
         binding.btnSaveTask.setOnClickListener {
             viewModel.insert(generateTask())
+            setResult(Activity.RESULT_OK)
+            Toast.makeText(
+                this,
+                "Tarefa Agendada",
+                Toast.LENGTH_LONG
+            )
         }
     }
 
