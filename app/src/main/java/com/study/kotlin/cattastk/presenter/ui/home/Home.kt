@@ -19,7 +19,10 @@ class Home : AppCompatActivity() {
     }
 
     private fun setup() {
-        TODO("Not yet implemented")
+        binding.rcvTasksList.adapter = this.adapter;
+        setupList();
+        updateList();
+        setupListeners()
     }
 
 
