@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputLayout
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.R
@@ -19,6 +20,7 @@ import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
 import java.time.LocalDate
+import java.util.*
 
 
 class add_task : AppCompatActivity() {
@@ -39,6 +41,7 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setupListener() {
+
         binding.btnSaveTask.setOnClickListener {
             viewModel.insert(generateTask())
             setResult(Activity.RESULT_OK)
@@ -48,6 +51,21 @@ class add_task : AppCompatActivity() {
                 Toast.LENGTH_LONG
             )
         }
+
+        binding.inputDate.editText?.setOnClickListener{
+
+            val datePicker =  MaterialDatePicker.Builder.datePicker().build()
+
+            datePicker.addOnPositiveButtonClickListener {
+                val timeZone = TimeZone.getDefault()
+                val offset = timeZone.getOffset(Date().time)*-1
+
+                binding.inputDate.editText?.text = Date(it + offset).format()
+            }
+            datePicker.show(supportFragmentManager, "DATE_PICKER_TAG")
+        }
+
+
     }
 
     private fun generateTask(): Task {
