@@ -21,11 +21,17 @@ import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
+import com.study.kotlin.cattastk.util.format
+import com.study.kotlin.cattastk.util.text
 import java.time.LocalDate
 import java.util.*
 
 
 class add_task : AppCompatActivity() {
+
+    companion object {
+        const val TASK_ID = "task_id"
+    }
 
     val binding by lazy { ActivityAddTaskBinding.inflate(layoutInflater) }
     val viewModel: MainViewModel by viewModels { MainViewModelFactory((application as App).taskUseCase) }
@@ -43,6 +49,7 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setupListener() {
+//        binding.homeToolbar.navigationIcon
 
         binding.btnSaveTask.setOnClickListener {
             viewModel.insert(generateTask())
@@ -62,15 +69,7 @@ class add_task : AppCompatActivity() {
                 val timeZone = TimeZone.getDefault()
                 val offset = timeZone.getOffset(Date().time)*-1
 
-                binding.inputDate.editText?.text?.clear();
-                binding.
-                    inputDate.
-                        editText?.
-                            text?.
-                                insert(
-                                    0,
-                                    Date(it + offset).format()
-                                )
+                binding.inputDate.text = Date(it + offset).format()
             }
             datePicker.show(supportFragmentManager, "DATE_PICKER_TAG")
         }
