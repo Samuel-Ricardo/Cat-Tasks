@@ -9,6 +9,7 @@ class TaskViewHolder(
 ): RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: Task){
-
+        binding.taskTitle.text = item.title;
+        binding.taskNotes.text = getSummedUpText(item.notes)
     }
 }
