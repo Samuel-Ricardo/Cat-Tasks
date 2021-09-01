@@ -3,9 +3,11 @@ package com.study.kotlin.cattastk.presenter.ui.task.create
 import android.Manifest
 import android.app.AlertDialog
 import android.app.Dialog
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import com.google.android.material.textfield.TextInputLayout
 import com.study.kotlin.cattastk.App
@@ -45,9 +47,19 @@ class add_task : AppCompatActivity() {
             id= -1,
             title = textOf(binding.inputTitle),
             notes = textOf(binding.inputNotes),
-            date = textToLocalDate(textOf(binding.inputDate)),
-            time = textToLocalTime(textOf(binding.inputTime))
+            date = textOf(binding.inputDate),
+            time = textOf(binding.inputTime)
         )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun textToLocalDate(text: String): LocalDate {
+        val date = text.split("/")
+
+        return LocalDate.of(
+            date[0].toInt(),
+            date[1].toInt(),
+            date[2].toInt())
     }
 
     private fun textOf(textInput: TextInputLayout) = textInput.editText?.text.toString()

@@ -10,6 +10,6 @@ data class Task (
     @PrimaryKey(autoGenerate = true) val id:Int = 0,
     val title:String,
     val notes:String,
-    val date:LocalDate,
-    val time:LocalTime,
+    val date:String,
+    val time:String,
 )
