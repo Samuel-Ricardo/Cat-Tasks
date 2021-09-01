@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".add_task"></activity>
-        <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".presenter.ui.task.create.add_task"></activity>
+        <activity android:name=".presenter.ui.home.Home" />
+        <activity android:name=".presenter.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
