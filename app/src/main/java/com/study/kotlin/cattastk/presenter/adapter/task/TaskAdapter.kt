@@ -1,4 +1,4 @@
-package com.study.kotlin.cattastk.presenter.adapter
+package com.study.kotlin.cattastk.presenter.adapter.task
 
 import androidx.recyclerview.widget.DiffUtil
 import com.study.kotlin.cattastk.data.entity.Task
