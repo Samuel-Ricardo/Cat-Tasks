@@ -3,9 +3,10 @@ package com.study.kotlin.cattastk.domain
 import androidx.lifecycle.LiveData
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.data.repositories.TaskRepository
+import com.study.kotlin.cattastk.interfaces.TasksRepository
 
 class TaskUseCase(
-    private val repository: TaskRepository
+    private val repository: TasksRepository
 ) {
 
     fun insert(task: Task) {
