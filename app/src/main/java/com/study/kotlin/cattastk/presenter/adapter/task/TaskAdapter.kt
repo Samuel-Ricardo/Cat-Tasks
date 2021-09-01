@@ -15,8 +15,8 @@ class TaskAdapter: ListAdapter<Task,TaskViewHolder>(DiffCallback()) {
     var listenerDelete: (Task) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val infalter = LayoutInflater.from(parent.context)
-        val binding = TaskLayoutBinding.inflate(infalter, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = TaskLayoutBinding.inflate(inflater, parent, false)
 
         return TaskViewHolder(binding);
     }
