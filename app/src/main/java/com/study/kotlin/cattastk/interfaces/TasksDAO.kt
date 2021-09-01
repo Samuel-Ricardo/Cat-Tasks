@@ -5,6 +5,8 @@ import com.study.kotlin.cattastk.data.entity.Task
 
 interface TasksDAO {
 
+    fun select(task_id:Int): LiveData<List<Task>>
+
     fun getAll(): LiveData<List<Task>>
 
     suspend fun insert(task: Task)
