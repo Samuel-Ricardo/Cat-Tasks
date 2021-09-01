@@ -1,4 +1,4 @@
-package com.study.kotlin.cattastk.domain.model
+package com.study.kotlin.cattastk.domain
 
 import androidx.lifecycle.LiveData
 import com.study.kotlin.cattastk.data.entity.Task
