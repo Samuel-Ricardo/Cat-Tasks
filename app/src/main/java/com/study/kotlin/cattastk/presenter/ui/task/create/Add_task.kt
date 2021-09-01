@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.R
+import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
@@ -35,6 +36,16 @@ class add_task : AppCompatActivity() {
         binding.btnSaveTask.setOnClickListener {
             viewModel.insert(generateTask())
         }
+    }
+
+    private fun generateTask(): Task {
+        return Task(
+            id= -1,
+            title = textOf(binding.inputTitle),
+            notes = textOf(binding.inputNotes),
+            date = textOf(binding.inputDate,
+            time = textOf(binding.inputTime)
+        )
     }
 
     private fun setupPermissions() {
