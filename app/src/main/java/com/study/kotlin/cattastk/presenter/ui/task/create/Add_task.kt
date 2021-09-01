@@ -17,7 +17,7 @@ import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactor
 class add_task : AppCompatActivity() {
 
     val binding by lazy { ActivityAddTaskBinding.inflate(layoutInflater) }
-    val MainViewModel:MainViewModel by viewModels { MainViewModelFactory((application as App).taskUseCase) }
+    val viewModel: MainViewModel by viewModels { MainViewModelFactory((application as App).taskUseCase) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,9 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setupListener() {
-        TODO("Not yet implemented")
+        binding.btnSaveTask.setOnClickListener {
+            viewModel.insert(generateTask())
+        }
     }
 
     private fun setupPermissions() {
