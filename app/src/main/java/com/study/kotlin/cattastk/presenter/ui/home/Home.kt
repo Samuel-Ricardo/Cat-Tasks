@@ -19,10 +19,13 @@ class Home : AppCompatActivity() {
     }
 
     private fun setup() {
-        binding.rcvTasksList.adapter = this.adapter;
         setupList();
-        updateList();
         setupListeners()
+    }
+
+    private fun setupList() {
+        binding.rcvTasksList.adapter = this.adapter;
+        updateList();
     }
 
 
