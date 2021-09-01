@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/initial_button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_desc">
@@ -82,7 +82,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/initial_button"
+        android:id="@+id/btn_add_task"
         style="@style/Widget.MaterialComponents.Button"
 
         app:cornerRadius="24dp"

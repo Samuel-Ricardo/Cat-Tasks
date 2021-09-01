@@ -1,5 +1,6 @@
 package com.study.kotlin.cattastk.presenter.ui.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -8,6 +9,7 @@ import com.study.kotlin.cattastk.R
 import com.study.kotlin.cattastk.databinding.ActivityHomeBinding
 import com.study.kotlin.cattastk.domain.TaskUseCase
 import com.study.kotlin.cattastk.presenter.adapter.task.TaskAdapter
+import com.study.kotlin.cattastk.presenter.ui.task.create.add_task
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
 
@@ -37,6 +39,12 @@ class Home : AppCompatActivity() {
         setupListeners()
     }
 
+    private fun setupListeners() {
+        binding.btnAddTask.setOnClickListener {
+            startActivity(Intent(this,  add_task::class.java))
+        }
+    }
+
     private fun setupList() {
         binding.rcvTasksList.adapter = this.adapter;
         updateList();
@@ -47,5 +55,4 @@ class Home : AppCompatActivity() {
             adapter.submitList(task)
         })
     }
-
 }
