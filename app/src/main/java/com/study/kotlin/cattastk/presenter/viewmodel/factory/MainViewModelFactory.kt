@@ -14,5 +14,7 @@ class MainViewModelFactory(private val useCase: TaskUseCase): ViewModelProvider.
             @Suppress("UNCHECKED_CAST")
             return MainViewModel(useCase) as T
         }
+
+        throw IllegalArgumentException("Unknow ViewModel Class")
     }
 }

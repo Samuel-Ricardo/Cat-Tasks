@@ -97,6 +97,7 @@
         android:textStyle="bold"
         android:text="@string/letsgo"
         android:textAllCaps="false"
+        android:onClick="goToHome"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
