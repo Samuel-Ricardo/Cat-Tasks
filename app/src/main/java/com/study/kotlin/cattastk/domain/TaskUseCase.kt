@@ -9,12 +9,22 @@ class TaskUseCase(
     private val repository: TasksRepository
 ) {
 
-    fun insert(task: Task) {
-        if(exists(task)){
-            repository.update(task)
-        }else{
-            repository.insert(task)
+    fun insert(task: Task): Boolean {
+
+        try {
+
+            if(exists(task)){
+                repository.update(task)
+            }else{
+                repository.insert(task)
+            }
+
+            return true;
+        }catch (ex: Exception){
+            ex.printStackTrace();
+            return false;
         }
+
     }
 
     fun getAll(): LiveData<List<Task>> {

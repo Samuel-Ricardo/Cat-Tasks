@@ -9,8 +9,8 @@ class MainViewModel (
     val taskUseCase: TaskUseCase
 ):ViewModel() {
 
-    fun insert(task: Task) {
-       taskUseCase.insert(task)
+    fun insert(task: Task): Boolean {
+      return taskUseCase.insert(task)
     }
 
     fun getAll(): LiveData<List<Task>> {
