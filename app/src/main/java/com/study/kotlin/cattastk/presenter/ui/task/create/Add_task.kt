@@ -22,6 +22,15 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setup() {
+        setupPermissions()
+        setupListener()
+    }
+
+    private fun setupListener() {
+        TODO("Not yet implemented")
+    }
+
+    private fun setupPermissions() {
         TODO("Not yet implemented")
     }
 }
