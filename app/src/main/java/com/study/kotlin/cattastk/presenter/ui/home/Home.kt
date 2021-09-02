@@ -50,10 +50,10 @@ class Home : AppCompatActivity() {
 
     private fun setupTasksList() {
         binding.rcvTasksList.adapter = this.adapter;
-        updateList();
+        updateTaskList();
     }
 
-    private fun updateList() {
+    private fun updateTaskList() {
         viewModel.getAll().observe(this, {task ->
             adapter.submitList(task)
         })
