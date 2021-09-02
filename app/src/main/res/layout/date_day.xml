@@ -29,6 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date_title"
-        tools:text="28" />
+        tools:text="28/12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
