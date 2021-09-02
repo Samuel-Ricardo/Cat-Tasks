@@ -35,6 +35,8 @@ class TaskUseCase(
 
         val task = repository.select(task.id)
 
-        return task.value!!.isNotEmpty();
+        //val value = task.value
+
+        return task.value?.isNotEmpty() ?: false;
     }
 }

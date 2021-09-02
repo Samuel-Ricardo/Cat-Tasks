@@ -114,17 +114,19 @@ class add_task : AppCompatActivity() {
 
     private fun setupPermissions() {
 
+        /*
         AlertDialog
             .Builder(this)
                 .setTitle("Armazenamento")
                 .setMessage("Precisamos que você permita o acesso ao armazenamento para poder salvar as Tasks / Tarefas")
                 .show()
+        */
 
         ActivityCompat.requestPermissions(
             this,
             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
             1
-        )
+        ).also {  }
 
         requestPermissions(
             arrayOf(
