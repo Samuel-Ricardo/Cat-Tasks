@@ -13,7 +13,7 @@ import com.study.kotlin.cattastk.presenter.adapter.task.viewholder.TaskViewHolde
 import java.time.LocalDate
 
 class DateDayAdapter(
-    val days: MutableList<LocalDate>,
+    val days: List<LocalDate>,
     val onClick: (() -> Unit)
 ): RecyclerView.Adapter<DateDayViewHolder>() {
 
