@@ -45,6 +45,10 @@ class Home : AppCompatActivity() {
     }
 
     private fun setupLists() {
+        setupTasksList()
+    }
+
+    private fun setupTasksList() {
         binding.rcvTasksList.adapter = this.adapter;
         updateList();
     }
