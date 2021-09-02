@@ -34,7 +34,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun setup() {
-        setupList();
+        setupLists();
         setupListeners()
     }
 
@@ -44,7 +44,7 @@ class Home : AppCompatActivity() {
         }
     }
 
-    private fun setupList() {
+    private fun setupLists() {
         binding.rcvTasksList.adapter = this.adapter;
         updateList();
     }
