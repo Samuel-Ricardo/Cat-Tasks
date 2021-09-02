@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,7 @@ import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.R
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
+import com.study.kotlin.cattastk.presenter.ui.home.Home
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
 import com.study.kotlin.cattastk.util.format
@@ -27,7 +29,7 @@ import java.time.LocalDate
 import java.util.*
 
 
-class add_task : AppCompatActivity() {
+class AddTaskActivity : AppCompatActivity() {
 
     companion object {
         const val TASK_ID = "task_id"
@@ -49,7 +51,9 @@ class add_task : AppCompatActivity() {
     }
 
     private fun setupListener() {
-//        binding.homeToolbar.navigationIcon
+       binding.homeToolbar.setNavigationOnClickListener {
+           startActivity(Intent(this, Home::class.java))
+       }
 
         binding.btnSaveTask.setOnClickListener {
             viewModel.insert(generateTask())
@@ -58,7 +62,8 @@ class add_task : AppCompatActivity() {
                 this,
                 "Tarefa Agendada",
                 Toast.LENGTH_LONG
-            )
+            ).show()
+            finish()
         }
 
         binding.inputDate.editText?.setOnClickListener{
