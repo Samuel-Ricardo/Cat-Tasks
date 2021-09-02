@@ -4,13 +4,18 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.study.kotlin.cattastk.databinding.DateDayBinding
 import com.study.kotlin.cattastk.presenter.adapter.date.viewholder.DateDayViewHolder
 import com.study.kotlin.cattastk.presenter.adapter.task.viewholder.TaskViewHolder
 import java.time.LocalDate
 
-class DateDayAdapter: ListAdapter<LocalDate, DateDayViewHolder>() {
+class DateDayAdapter(
+    val days: MutableList<LocalDate>,
+    val onClick: (() -> Unit)
+): RecyclerView.Adapter<DateDayViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DateDayViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -19,7 +24,10 @@ class DateDayAdapter: ListAdapter<LocalDate, DateDayViewHolder>() {
         return (DateDayViewHolder(binding))
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: DateDayViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(days[position])
     }
+
+    override fun getItemCount(): Int = days.size
 }
