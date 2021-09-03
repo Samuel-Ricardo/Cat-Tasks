@@ -8,10 +8,9 @@ import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.study.kotlin.cattastk.databinding.DateDayBinding
+import com.study.kotlin.cattastk.domain.model.Date
 import com.study.kotlin.cattastk.presenter.adapter.date.viewholder.DateDayViewHolder
 import com.study.kotlin.cattastk.presenter.adapter.task.viewholder.TaskViewHolder
-import java.time.LocalDate
-import java.util.*
 
 class DateDayAdapter(
     val days: List<Date>,

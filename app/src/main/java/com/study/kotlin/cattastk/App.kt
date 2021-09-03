@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.study.kotlin.cattastk.data.database.AppDatabase
 import com.study.kotlin.cattastk.data.repositories.TaskRepository
 import com.study.kotlin.cattastk.domain.TaskUseCase
+import com.study.kotlin.cattastk.domain.model.Date
 import java.time.LocalDate
 
 class App: Application() {
@@ -21,7 +22,7 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val now = LocalDate.now()
+        val now = Date()
 
         var daysInMonth = mutableListOf<LocalDate>()
 

@@ -5,14 +5,22 @@ import java.util.*
 class Date{
 
     companion object {
-        const val  weeksInYear = 52
+        fun now():Date {
+
+            val calendar = Calendar.getInstance();
+
+           return Date(
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+            )
+        }
     }
 
-    var year = Calendar.YEAR
-    var month = Calendar.MONTH
-    var day = Calendar.DAY_OF_MONTH
-    var week = Calendar.WEEK_OF_YEAR
-    var calendar = Calendar.getInstance();
+    var calendar = Calendar.getInstance()!!
+    var year = calendar.get(Calendar.YEAR)
+    var month = calendar.get(Calendar.MONTH)
+    var day = calendar.get(Calendar.DAY_OF_MONTH)
 
     constructor( year: Int, month: Int, day: Int){ setDate(year,month,day) }
 
