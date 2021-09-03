@@ -13,6 +13,17 @@ class Date{
     var month = 9
     var day = 2
 
+    constructor(
+        year: Int,
+        month: Int,
+        day: Int,
+    ){
+
+        this.year = year
+        this.month = month
+        this.day = checkDay(day)
+    }
+
 
 
 
