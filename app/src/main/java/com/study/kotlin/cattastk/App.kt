@@ -22,13 +22,13 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val now = Date()
+        val now = Date.now();
 
-        var daysInMonth = mutableListOf<LocalDate>()
+        var daysInMonth = mutableListOf<Date>()
 
         var cont = 1
 
-        while (cont <=  now.month.length(false)){
+        while (cont <=  now.daysOfMonth()){
             daysInMonth.add(now.withDayOfMonth(cont))
         }
 

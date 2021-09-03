@@ -7,9 +7,9 @@ class Date{
     companion object {
         fun now():Date {
 
-            val calendar = Calendar.getInstance();
+            val calendar = Calendar.getInstance()
 
-           return Date(
+            return Date(
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH)
@@ -17,7 +17,7 @@ class Date{
         }
     }
 
-    var calendar = Calendar.getInstance()!!
+    var calendar = Calendar.getInstance()
     var year = calendar.get(Calendar.YEAR)
     var month = calendar.get(Calendar.MONTH)
     var day = calendar.get(Calendar.DAY_OF_MONTH)
@@ -48,6 +48,9 @@ class Date{
         this.calendar.set(year,month,day)
     }
 
+    fun isLeapYear() = if (year%4 == 0) year%100 != 0 else year%400 == 0
+
+
 
     fun getWeekBraziliamName() = when(calendar.get(Calendar.DAY_OF_WEEK)) {
             Calendar.SUNDAY -> "Domingo"
@@ -76,6 +79,10 @@ class Date{
         else -> "Invalid Month"
     }
 
+
+    fun daysOfMonth():Int {
+
+    }
 
     override fun toString(): String {
         return "$day/$month/$year"
