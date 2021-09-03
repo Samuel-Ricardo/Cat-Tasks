@@ -5,6 +5,10 @@ class Time {
     var hour = 0
     var minutes = 0
 
+    constructor(hour: Int, minutes: Int) { setTime(hour, minutes) }
+
+
+
      fun setTime(hour: Int, minutes: Int){
         this.hour = checkHour(hour)
         this.minutes = checkMinutes(minutes)
