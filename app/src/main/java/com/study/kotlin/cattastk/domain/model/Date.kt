@@ -6,13 +6,13 @@ class Date{
     var month = 9
     var day = 2
 
-    constructor( year: Int, month: Int, day: Int){ setData(year,month,day) }
+    constructor( year: Int, month: Int, day: Int){ setDate(year,month,day) }
 
     constructor(date:String){
 
         val dates = date.split("/")
 
-        setData(dates[0].toInt(),dates[1].toInt(),dates[2].toInt())
+        setDate(dates[0].toInt(),dates[1].toInt(),dates[2].toInt())
     }
 
     private fun checkDay(day: Int): Int {
@@ -22,7 +22,7 @@ class Date{
             1
     }
 
-    private fun setData(year: Int, month: Int, day: Int){
+    fun setDate(year: Int, month: Int, day: Int){
         this.year = year
         this.month = month
         this.day = checkDay(day)

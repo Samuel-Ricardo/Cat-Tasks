@@ -5,8 +5,10 @@ class Time {
     var hour = 0
     var minutes = 0
 
-    private fun setData(hour: Int, minutes: Int){
+     fun setTime(hour: Int, minutes: Int){
         this.hour = checkHour(hour)
         this.minutes = checkMinutes(minutes)
     }
+
+
 }
