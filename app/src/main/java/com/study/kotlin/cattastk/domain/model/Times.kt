@@ -18,14 +18,17 @@ class Date{
         month: Int,
         day: Int,
     ){
-
         this.year = year
         this.month = month
         this.day = checkDay(day)
     }
 
-
-
+    private fun checkDay(day: Int): Int {
+        return if (day in 0..31)
+            day
+        else
+            1
+    }
 
 /*
     constructor(
