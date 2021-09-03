@@ -27,7 +27,7 @@ class App: Application() {
 
         var cont = 1
 
-        while (cont <=  now.month.length()){
+        while (cont <=  now.month.length(false)){
             daysInMonth.add(now.withDayOfMonth(cont))
         }
 

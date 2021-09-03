@@ -11,9 +11,10 @@ import com.study.kotlin.cattastk.databinding.DateDayBinding
 import com.study.kotlin.cattastk.presenter.adapter.date.viewholder.DateDayViewHolder
 import com.study.kotlin.cattastk.presenter.adapter.task.viewholder.TaskViewHolder
 import java.time.LocalDate
+import java.util.*
 
 class DateDayAdapter(
-    val days: List<LocalDate>,
+    val days: List<Date>,
     val onClick: (() -> Unit)
 ): RecyclerView.Adapter<DateDayViewHolder>() {
 

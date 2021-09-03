@@ -14,7 +14,10 @@ class DateDayViewHolder(
 ): RecyclerView.ViewHolder(binding.root) {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun bind(item: LocalDate){
+    fun bind(item: Date){
+
+        item.
+
         binding.dateTitle.text = item.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt br"))
         binding.dateDay.text = "${item.dayOfMonth}/${item.month.value}"
     }
