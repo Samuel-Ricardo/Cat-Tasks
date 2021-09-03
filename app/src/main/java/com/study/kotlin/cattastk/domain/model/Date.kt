@@ -5,6 +5,9 @@ import java.util.*
 class Date{
 
     companion object {
+
+        fun isLeapYear(year: Int) = if (year%4 == 0) year%100 != 0 else year%400 == 0
+
         fun now():Date {
 
             val calendar = Calendar.getInstance()
@@ -15,6 +18,23 @@ class Date{
                 calendar.get(Calendar.DAY_OF_MONTH)
             )
         }
+
+        fun daysOfMonth(year: Int, month: Int) = when(month) {
+            1 -> 31
+            2 -> if(isLeapYear(year)) 29 else 28
+            3 -> 31
+            4 -> 30
+            5 -> 31
+            6 -> 30
+            7 -> 31
+            8 -> 31
+            9 -> 30
+            10 -> 31
+            11 -> 30
+            12 -> 31
+            else -> -1
+        }
+
     }
 
     var calendar = Calendar.getInstance()

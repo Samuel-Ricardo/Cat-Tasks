@@ -16,7 +16,7 @@ class App: Application() {
     val taskUseCase by lazy {TaskUseCase(repository)}
 
     companion object{
-        var days = MutableLiveData<List<LocalDate>>()
+        var days = MutableLiveData<List<Date>>()
     }
 
     override fun onCreate() {
@@ -26,10 +26,11 @@ class App: Application() {
 
         var daysInMonth = mutableListOf<Date>()
 
-        var cont = 1
+        var month = 1
+        var dayOfMotnh = 1
 
-        while (cont <=  now.daysOfMonth()){
-            daysInMonth.add(now.withDayOfMonth(cont))
+        while (month <=  12){
+           while(dayOfMotnh <= Date.)
         }
 
         days.value = daysInMonth;
