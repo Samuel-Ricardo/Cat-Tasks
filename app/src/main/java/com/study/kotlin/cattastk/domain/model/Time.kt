@@ -7,7 +7,10 @@ class Time {
 
     constructor(hour: Int, minutes: Int) { setTime(hour, minutes) }
 
-
+    constructor(time:String) {
+        val times = time.split(":")
+        setTime(times[0].toInt(),times[1].toInt())
+    }
 
      fun setTime(hour: Int, minutes: Int){
         this.hour = checkHour(hour)
