@@ -35,7 +35,9 @@ class Date{
         this.day = checkDay(day)
     }
 
-
+    override fun toString(): String {
+        return "$day/$month/$year"
+    }
 
 
 /*
