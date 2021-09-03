@@ -22,17 +22,32 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
+        setupAppCalendar()
+    }
+
+    private fun setupAppCalendar() {
         val now = Date.now();
 
-        var daysInMonth = mutableListOf<Date>()
+        var dates = mutableListOf<Date>()
 
         var month = 1
         var dayOfMotnh = 1
 
         while (month <=  12){
-           while(dayOfMotnh <= Date.)
+            while(dayOfMotnh <= Date.daysOfMonth(month, now.year)){
+                dates.add(Date(
+                    now.year,
+                    month,
+                    dayOfMotnh
+                ))
+                dayOfMotnh ++
+            }
+            dayOfMotnh = 1
+            month ++
         }
 
-        days.value = daysInMonth;
+        days.value = dates;
     }
+
+
 }
