@@ -13,15 +13,7 @@ class Date{
     var month = 9
     var day = 2
 
-    constructor(
-        year: Int,
-        month: Int,
-        day: Int,
-    ){
-        this.year = year
-        this.month = month
-        this.day = checkDay(day)
-    }
+    constructor( year: Int, month: Int, day: Int) = setData(year,month,day);
 
     private fun checkDay(day: Int): Int {
         return if (day in 0..31)
@@ -29,6 +21,19 @@ class Date{
         else
             1
     }
+
+    private fun setData(year: Int, month: Int, day: Int){
+        this.year = year
+        this.month = month
+        this.day = checkDay(day)
+    }
+
+    constructor(date:String){
+
+        val dates = date.split("/")
+
+    }
+
 
 /*
     constructor(
