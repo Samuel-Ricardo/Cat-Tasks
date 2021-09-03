@@ -10,6 +10,10 @@ class Time {
         this.minutes = checkMinutes(minutes)
     }
 
+    private fun checkMinutes(minutes: Int): Int {
+        return if (hour in 0..60) hour else 0
+    }
+
     private fun checkHour(hour: Int): Int {
         return if (hour in 1..24) hour else 0
     }
