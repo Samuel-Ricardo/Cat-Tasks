@@ -5,9 +5,9 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.study.kotlin.cattastk.databinding.ActivityAddTaskBinding
 import com.study.kotlin.cattastk.databinding.DateDayBinding
-import java.time.LocalDate
+import com.study.kotlin.cattastk.domain.model.Date
 import java.time.format.TextStyle
-import java.util.*
+
 
 class DateDayViewHolder(
     private val binding: DateDayBinding
@@ -18,7 +18,7 @@ class DateDayViewHolder(
 
         item.
 
-        binding.dateTitle.text = item.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt br"))
+        binding.dateTitle.text = item.day.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("pt br"))
         binding.dateDay.text = "${item.dayOfMonth}/${item.month.value}"
     }
 }

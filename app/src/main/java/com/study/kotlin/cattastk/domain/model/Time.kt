@@ -25,5 +25,7 @@ class Time {
         return if (hour in 1..24) hour else 0
     }
 
-
+    override fun toString(): String {
+        return "$hour:$minutes"
+    }
 }
