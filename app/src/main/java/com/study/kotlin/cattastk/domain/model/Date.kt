@@ -22,9 +22,12 @@ class Date{
             1
     }
 
+    private fun checkMonth(month: Int) = if (month in 1..12) month else 1
+
+
     fun setDate(year: Int, month: Int, day: Int){
         this.year = year
-        this.month = month
+        this.month = checkMonth(month)
         this.day = checkDay(day)
     }
 
@@ -34,7 +37,9 @@ class Date{
 
     fun getMonthBraziliamName():String {
 
-
+        when(month) {
+            1 -> "janeiro"
+        }
     }
 
 
