@@ -14,4 +14,6 @@ interface TasksRepository{
 
     fun getAll() : LiveData<List<Task>>
 
+    fun getTodayTasks(): LiveData<List<Task>>
+
 }

@@ -31,7 +31,9 @@ class TaskUseCase(
         return repository.getAll()
     }
 
-
+    fun getTodayTasks(): LiveData<List<Task>> {
+        return repository.getTodayTasks()
+    }
 
     fun exists(task: Task):Boolean {
 
