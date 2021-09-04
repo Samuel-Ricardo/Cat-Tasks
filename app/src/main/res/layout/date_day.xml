@@ -10,7 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/date_title"
+        android:id="@+id/lbl_date_title"
         style="@style/title_h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         tools:text="Terça" />
 
     <TextView
-        android:id="@+id/date_day"
+        android:id="@+id/lbl_date_day"
         style="@style/title_h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_title"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_date_title"
         tools:text="28/12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
