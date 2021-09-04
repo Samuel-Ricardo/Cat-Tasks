@@ -25,20 +25,8 @@ class TaskAdapter(var selectedDay:Date): ListAdapter<Task,TaskViewHolder>(DiffCa
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        val item = getItem(position)
-        val itemDate = Date(item.date)
 
-        if(
-            selectedDay.month == itemDate.month
-                &&
-            selectedDay.day == itemDate.day
-        ){
-            holder.bind(item)
-        }else{
-           // this.currentList.remove(item)
-        }
-
-        // holder.bind(item)
+        holder.bind(getItem(position))
     }
 
     fun updateList(list: List<Task>, selectedDay: Date) {

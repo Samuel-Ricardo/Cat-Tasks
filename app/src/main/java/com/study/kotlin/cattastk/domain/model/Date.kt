@@ -48,6 +48,10 @@ class Date{
 
         val dates = date.split("/")
 
+        val toInt0 = dates[0].toInt()
+        val toInt1 = dates[1].toInt()
+        val toInt2 = dates[2].toInt()
+
         setDate(
             dates[0].toInt(),
             dates[1].toInt(),
@@ -78,6 +82,14 @@ class Date{
     }
 
     fun isLeapYear() = if (year%4 == 0) year%100 != 0 else year%400 == 0
+
+
+
+    fun dayOfYear():Int {
+        return calendar.get(Calendar.DAY_OF_YEAR);
+    }
+
+
 
     fun getWeekBraziliamName() = when(calendar.get(Calendar.DAY_OF_WEEK)) {
             Calendar.SUNDAY -> "Domingo"
@@ -134,6 +146,8 @@ class Date{
         return "$date/$month"
     }
 
+    fun formatFullDate() = "${formatSimpleDate()}/$year"
+
 
     fun isEquals(date: Date):Boolean{
         if(
@@ -151,7 +165,6 @@ class Date{
 
     override fun toString(): String = formatFullDate();
 
-    private fun formatFullDate() = "${formatSimpleDate()}/$year"
 
 /*
     constructor(

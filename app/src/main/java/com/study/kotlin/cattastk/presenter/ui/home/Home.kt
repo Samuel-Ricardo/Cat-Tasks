@@ -59,6 +59,7 @@ class Home : AppCompatActivity() {
         }
 
         binding.rcvDays.adapter = adapter
+        binding.rcvDays.layoutManager!!.scrollToPosition(Date.now().dayOfYear())
     }
 
     private fun setupTasksList(selectedDate: Date) {

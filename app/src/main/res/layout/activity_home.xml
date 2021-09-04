@@ -66,6 +66,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rcvDays" />
 
+    <include
+        android:id="@+id/include_empty_tasks"
+        layout="@layout/empty_tasks"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvTasksList"
