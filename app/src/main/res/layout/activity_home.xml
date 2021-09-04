@@ -13,7 +13,7 @@
         android:layout_marginEnd="15dp"
         app:layout_constraintBottom_toTopOf="@+id/rcvTasksList"
         app:layout_constraintEnd_toStartOf="@+id/tasks_title"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        app:layout_constraintTop_toBottomOf="@+id/rcvDays"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
 
@@ -24,7 +24,7 @@
         android:layout_marginStart="15dp"
         app:layout_constraintBottom_toTopOf="@+id/rcvTasksList"
         app:layout_constraintStart_toEndOf="@+id/tasks_title"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        app:layout_constraintTop_toBottomOf="@+id/rcvDays"
         app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -64,7 +64,7 @@
         android:text="@string/tasks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+        app:layout_constraintTop_toBottomOf="@+id/rcvDays" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -104,7 +104,7 @@
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintBottom_toTopOf="@+id/rcvDays"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_cat" />
 

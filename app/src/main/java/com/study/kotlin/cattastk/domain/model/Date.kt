@@ -15,7 +15,7 @@ class Date{
 
             return Date(
                 calendar.get(Calendar.YEAR),
-                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.MONTH) +1,
                 calendar.get(Calendar.DAY_OF_MONTH)
             )
         }
@@ -39,7 +39,7 @@ class Date{
 
     var calendar = Calendar.getInstance()
     var year = calendar.get(Calendar.YEAR)
-    var month = calendar.get(Calendar.MONTH)
+    var month = calendar.get(Calendar.MONTH) +1
     var day = calendar.get(Calendar.DAY_OF_MONTH)
 
     constructor( year: Int, month: Int, day: Int){ setDate(year,month,day) }
@@ -63,12 +63,12 @@ class Date{
 
     fun setDate(year: Int, month: Int, day: Int){
 
-        val millis = System.currentTimeMillis()
+      //  val millis = System.currentTimeMillis()
 
-        val ano = millis/1000/60/60/24/365
+      //  val ano = millis/1000/60/60/24/365
 
         this.year = year
-        this.month = checkMonth(month) +1
+        this.month = checkMonth(month)
         this.day = checkDay(day)
         this.calendar.set(year,month,day)
     }
@@ -119,7 +119,7 @@ class Date{
                 else -> -1
             }
 
-    fun getSimpleDate():String{
+    fun formatSimpleDate():String{
 
         var date:String = "$day"
         var month:String = "$month"
