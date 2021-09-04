@@ -18,4 +18,8 @@ class MainViewModel (
     fun getAll(): LiveData<List<Task>> {
         return taskUseCase.getAll()
     }
+
+    fun getTodayTasks(): LiveData<List<Task>>{
+        return taskUseCase.getTodayTasks()
+    }
 }

@@ -67,7 +67,10 @@ class Home : AppCompatActivity() {
     }
 
     private fun updateTaskList(selectedDate: Date) {
-        viewModel.getAll().observe(this, {task ->
+
+        val allTasks = viewModel.getAll();
+
+        viewModel.getTodayTasks(selectedDate).observe(this, {task ->
             taskAdapter.updateList(task, selectedDate)
         })
     }
