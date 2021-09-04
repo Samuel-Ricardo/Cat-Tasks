@@ -1,6 +1,7 @@
 package com.study.kotlin.cattastk.presenter.adapter.task
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -11,7 +12,7 @@ import com.study.kotlin.cattastk.presenter.adapter.task.diff.DiffCallback
 import com.study.kotlin.cattastk.presenter.adapter.task.viewholder.TaskViewHolder
 import java.time.LocalDate
 
-class TaskAdapter(val selectedDay:Date): ListAdapter<Task,TaskViewHolder>(DiffCallback()) {
+class TaskAdapter(var selectedDay:Date): ListAdapter<Task,TaskViewHolder>(DiffCallback()) {
 
     var listenerEdit: (Task) -> Unit = {}
     var listenerDelete: (Task) -> Unit = {}
@@ -33,8 +34,15 @@ class TaskAdapter(val selectedDay:Date): ListAdapter<Task,TaskViewHolder>(DiffCa
             selectedDay.day == itemDate.day
         ){
             holder.bind(item)
+        }else{
+           // this.currentList.remove(item)
         }
 
         // holder.bind(item)
+    }
+
+    fun updateList(list: List<Task>, selectedDay: Date) {
+        this.selectedDay = selectedDay;
+        this.submitList(list);
     }
 }

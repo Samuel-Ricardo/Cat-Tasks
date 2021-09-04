@@ -30,8 +30,8 @@ class App: Application() {
         var month = 1
         var dayOfMotnh = 1
 
-        while (month !=  12){
-            while(dayOfMotnh != Date.daysInMonth(now.year, month)){
+        while (month !=  13){
+            while(dayOfMotnh != (Date.daysInMonth(now.year, month)+1)){
                 dates.add(Date(
                     now.year,
                     month,

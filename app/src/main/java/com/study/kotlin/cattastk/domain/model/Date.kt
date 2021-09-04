@@ -48,7 +48,11 @@ class Date{
 
         val dates = date.split("/")
 
-        setDate(dates[0].toInt(),dates[1].toInt(),dates[2].toInt())
+        setDate(
+            dates[0].toInt(),
+            dates[1].toInt(),
+            dates[2].toInt()
+        )
     }
 
     private fun checkDay(day: Int): Int {

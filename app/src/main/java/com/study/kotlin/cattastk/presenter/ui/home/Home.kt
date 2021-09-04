@@ -26,7 +26,7 @@ class Home : AppCompatActivity() {
             TaskUseCase((application as App).repository)
         )
     }
-    val adapter by lazy {TaskAdapter(Date.now())}
+    val taskAdapter by lazy {TaskAdapter(Date.now())}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,21 +48,27 @@ class Home : AppCompatActivity() {
 
     private fun setupLists() {
         setupDaysList()
-        setupTasksList()
+        setupTasksList(Date.now())
     }
 
     private fun setupDaysList() {
-        binding.rcvDays.adapter = DateDayAdapter(App.daysOfYear.value ?: listOf(Date.now())) {}
+
+        var adapter =  DateDayAdapter(App.daysOfYear.value ?: listOf(Date.now())) { item, position ->
+            this@Home.updateTaskList(item);
+            binding.rcvDays.layoutManager?.scrollToPosition(position)
+        }
+
+        binding.rcvDays.adapter = adapter
     }
 
-    private fun setupTasksList() {
-        binding.rcvTasksList.adapter = this.adapter;
-        updateTaskList();
+    private fun setupTasksList(selectedDate: Date) {
+        binding.rcvTasksList.adapter = this.taskAdapter;
+        updateTaskList(selectedDate);
     }
 
-    private fun updateTaskList() {
+    private fun updateTaskList(selectedDate: Date) {
         viewModel.getAll().observe(this, {task ->
-            adapter.submitList(task)
+            taskAdapter.updateList(task, selectedDate)
         })
     }
 }

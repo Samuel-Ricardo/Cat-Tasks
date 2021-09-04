@@ -1,7 +1,6 @@
 package com.study.kotlin.cattastk.presenter.adapter.date.viewholder
 
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import androidx.recyclerview.widget.RecyclerView
 import com.study.kotlin.cattastk.R
 import com.study.kotlin.cattastk.databinding.DateDayBinding
@@ -12,7 +11,7 @@ class DateDayViewHolder(
     private val binding: DateDayBinding
 ): RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: Date, isSelected:Boolean){
+    fun bind(item: Date, position:Int, isSelected: Boolean, onClick: (Date, Int) -> Unit){
 
         if(isSelected) setDarkTheme() else setLightTheme()
 
@@ -21,7 +20,14 @@ class DateDayViewHolder(
 
         itemView.setOnClickListener {
             it.isSelected = !it.isSelected
-            this@DateDayViewHolder.bind(item, it.isSelected)
+
+            if(it.isSelected){
+
+            }
+
+            this@DateDayViewHolder.bind(item, position, it.isSelected, onClick)
+
+            onClick(item,position)
         }
     }
 
@@ -29,6 +35,8 @@ class DateDayViewHolder(
         binding.dateDayBackground.setBackgroundColor(Color.BLACK)
         binding.lblDateDay.setTextColor(Color.WHITE)
         binding.lblDateTitle.setTextColor(Color.WHITE)
+
+
     }
 
     private fun setLightTheme() {
