@@ -149,9 +149,9 @@ class Date{
         }
     }
 
-    override fun toString(): String {
-        return "$day/$month/$year"
-    }
+    override fun toString(): String = formatFullDate();
+
+    private fun formatFullDate() = "${formatSimpleDate()}/$year"
 
 /*
     constructor(

@@ -10,7 +10,7 @@ interface TasksDAO {
 
     fun getAll(): LiveData<List<Task>>
 
-    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>
+    fun getTodayTasks(selectedDate: String): LiveData<List<Task>>
 
     suspend fun insert(task: Task)
 
