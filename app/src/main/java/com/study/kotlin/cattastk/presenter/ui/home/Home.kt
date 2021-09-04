@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.databinding.ActivityHomeBinding
 import com.study.kotlin.cattastk.domain.TaskUseCase
+import com.study.kotlin.cattastk.domain.model.Date
 import com.study.kotlin.cattastk.presenter.adapter.date.DateDayAdapter
 import com.study.kotlin.cattastk.presenter.adapter.task.TaskAdapter
 import com.study.kotlin.cattastk.presenter.ui.task.create.AddTaskActivity
@@ -26,7 +27,7 @@ class Home : AppCompatActivity() {
             TaskUseCase((application as App).repository)
         )
     }
-    val adapter by lazy {TaskAdapter(LocalDate.now())}
+    val adapter by lazy {TaskAdapter(Date.now())}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +53,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun setupDaysList() {
-        binding.rcvDays.adapter = DateDayAdapter(App.days.value ?: listOf(LocalDate.now()),{})
+        binding.rcvDays.adapter = DateDayAdapter(App.days.value ?: listOf(Date.now())) {}
     }
 
     private fun setupTasksList() {

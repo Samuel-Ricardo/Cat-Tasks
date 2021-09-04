@@ -24,9 +24,8 @@ class DateDayAdapter(
         return (DateDayViewHolder(binding))
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: DateDayViewHolder, position: Int) {
-        holder.bind(days[position])
+        holder.bind(days[position], false)
     }
 
     override fun getItemCount(): Int = days.size

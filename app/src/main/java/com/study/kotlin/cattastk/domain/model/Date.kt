@@ -1,5 +1,6 @@
 package com.study.kotlin.cattastk.domain.model
 
+import android.system.Os
 import java.util.*
 
 class Date{
@@ -19,7 +20,7 @@ class Date{
             )
         }
 
-        fun daysOfMonth(year: Int, month: Int) = when(month) {
+        fun daysOfMonth(year: Int, month: Int):Int = when(month) {
             1 -> 31
             2 -> if(isLeapYear(year)) 29 else 28
             3 -> 31
@@ -61,8 +62,13 @@ class Date{
 
 
     fun setDate(year: Int, month: Int, day: Int){
+
+        val millis = System.currentTimeMillis()
+
+        val ano = millis/1000/60/60/24/365
+
         this.year = year
-        this.month = checkMonth(month)
+        this.month = checkMonth(month) +1
         this.day = checkDay(day)
         this.calendar.set(year,month,day)
     }

@@ -20,9 +20,8 @@ class App: Application() {
     }
 
     override fun onCreate() {
-        super.onCreate()
-
         setupAppCalendar()
+        super.onCreate()
     }
 
     private fun setupAppCalendar() {
@@ -33,8 +32,8 @@ class App: Application() {
         var month = 1
         var dayOfMotnh = 1
 
-        while (month <=  12){
-            while(dayOfMotnh <= Date.daysOfMonth(month, now.year)){
+        while (month !=  12){
+            while(dayOfMotnh <= Date.daysOfMonth(now.year, month)){
                 dates.add(Date(
                     now.year,
                     month,
@@ -45,9 +44,9 @@ class App: Application() {
             dayOfMotnh = 1
             month ++
         }
+        dayOfMotnh = 1
+        month = 1
 
         days.value = dates;
     }
-
-
 }

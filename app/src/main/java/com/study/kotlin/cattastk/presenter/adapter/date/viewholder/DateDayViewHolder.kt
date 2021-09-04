@@ -13,7 +13,7 @@ class DateDayViewHolder(
     private val binding: DateDayBinding
 ): RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: Date){
+    fun bind(item: Date, isSelected:Boolean){
 
         binding.dateTitle.text = item.getWeekBraziliamName()
         binding.dateDay.text = "${item.day}/${item.month}"
