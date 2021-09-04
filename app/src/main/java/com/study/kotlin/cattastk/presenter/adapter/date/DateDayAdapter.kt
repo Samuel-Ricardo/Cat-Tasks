@@ -31,9 +31,9 @@ class DateDayAdapter(
         if(now.isEquals(days[position])){
 
             holder.bind(days[position], true)
-            holder.itemView.isSelected
+            holder.itemView.isSelected = true
         }else{
-            holder.bind(days[position], true)
+            holder.bind(days[position], false)
         }
 
 
