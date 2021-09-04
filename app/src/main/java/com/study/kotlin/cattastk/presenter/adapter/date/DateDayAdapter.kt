@@ -25,7 +25,19 @@ class DateDayAdapter(
     }
 
     override fun onBindViewHolder(holder: DateDayViewHolder, position: Int) {
-        holder.bind(days[position], false)
+
+        val now = Date.now()
+
+        if(now.isEquals(days[position])){
+
+            holder.bind(days[position], true)
+            holder.itemView.isSelected
+        }else{
+            holder.bind(days[position], true)
+        }
+
+
+
     }
 
     override fun getItemCount(): Int = days.size

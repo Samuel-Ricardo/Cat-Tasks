@@ -32,9 +32,9 @@ class TaskAdapter(val selectedDay:Date): ListAdapter<Task,TaskViewHolder>(DiffCa
             &&
             selectedDay.day == itemDate.day
         ){
-          //  holder.bind(item)
+            holder.bind(item)
         }
 
-        holder.bind(item)
+        // holder.bind(item)
     }
 }

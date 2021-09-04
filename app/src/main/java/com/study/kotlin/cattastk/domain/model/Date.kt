@@ -20,7 +20,7 @@ class Date{
             )
         }
 
-        fun daysOfMonth(year: Int, month: Int):Int = when(month) {
+        fun daysInMonth(year: Int, month: Int):Int = when(month) {
             1 -> 31
             2 -> if(isLeapYear(year)) 29 else 28
             3 -> 31
@@ -128,6 +128,21 @@ class Date{
         if(this.month < 10) month = "0$month"
 
         return "$date/$month"
+    }
+
+
+    fun isEquals(date: Date):Boolean{
+        if(
+            this.year == date.year
+                &&
+            this.month == date.month
+                &&
+            this.day == date.day
+        ){
+            return true
+        }else{
+            return false
+        }
     }
 
     override fun toString(): String {
