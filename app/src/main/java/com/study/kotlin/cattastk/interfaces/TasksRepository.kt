@@ -2,6 +2,7 @@ package com.study.kotlin.cattastk.interfaces
 
 import androidx.lifecycle.LiveData
 import com.study.kotlin.cattastk.data.entity.Task
+import com.study.kotlin.cattastk.domain.model.Date
 import kotlinx.coroutines.Job
 
 interface TasksRepository{
@@ -14,6 +15,6 @@ interface TasksRepository{
 
     fun getAll() : LiveData<List<Task>>
 
-    fun getTodayTasks(): LiveData<List<Task>>
+    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>
 
 }

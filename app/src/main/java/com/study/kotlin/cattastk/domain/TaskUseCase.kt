@@ -3,6 +3,7 @@ package com.study.kotlin.cattastk.domain
 import androidx.lifecycle.LiveData
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.data.repositories.TaskRepository
+import com.study.kotlin.cattastk.domain.model.Date
 import com.study.kotlin.cattastk.interfaces.TasksRepository
 
 class TaskUseCase(
@@ -24,15 +25,14 @@ class TaskUseCase(
             ex.printStackTrace();
             return false;
         }
-
     }
 
     fun getAll(): LiveData<List<Task>> {
         return repository.getAll()
     }
 
-    fun getTodayTasks(): LiveData<List<Task>> {
-        return repository.getTodayTasks()
+    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>> {
+        return repository.getTodayTasks(selectedDate);
     }
 
     fun exists(task: Task):Boolean {

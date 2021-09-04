@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.domain.TaskUseCase
+import com.study.kotlin.cattastk.domain.model.Date
 import java.time.LocalDate
 
 class MainViewModel (
@@ -19,7 +20,7 @@ class MainViewModel (
         return taskUseCase.getAll()
     }
 
-    fun getTodayTasks(): LiveData<List<Task>>{
-        return taskUseCase.getTodayTasks()
+    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>{
+        return taskUseCase.getTodayTasks(selectedDate)
     }
 }
