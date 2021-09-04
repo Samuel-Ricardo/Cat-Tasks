@@ -1,13 +1,11 @@
 package com.study.kotlin.cattastk
 
 import android.app.Application
-import android.icu.util.Calendar
 import androidx.lifecycle.MutableLiveData
 import com.study.kotlin.cattastk.data.database.AppDatabase
 import com.study.kotlin.cattastk.data.repositories.TaskRepository
 import com.study.kotlin.cattastk.domain.TaskUseCase
 import com.study.kotlin.cattastk.domain.model.Date
-import java.time.LocalDate
 
 class App: Application() {
 
@@ -16,7 +14,7 @@ class App: Application() {
     val taskUseCase by lazy {TaskUseCase(repository)}
 
     companion object{
-        var days = MutableLiveData<List<Date>>()
+        var daysOfYear = MutableLiveData<List<Date>>()
     }
 
     override fun onCreate() {
@@ -47,6 +45,6 @@ class App: Application() {
         dayOfMotnh = 1
         month = 1
 
-        days.value = dates;
+        daysOfYear.value = dates;
     }
 }

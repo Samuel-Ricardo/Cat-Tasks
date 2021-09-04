@@ -13,7 +13,6 @@ import com.study.kotlin.cattastk.presenter.adapter.task.TaskAdapter
 import com.study.kotlin.cattastk.presenter.ui.task.create.AddTaskActivity
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
-import java.time.LocalDate
 
 class Home : AppCompatActivity() {
 
@@ -53,7 +52,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun setupDaysList() {
-        binding.rcvDays.adapter = DateDayAdapter(App.days.value ?: listOf(Date.now())) {}
+        binding.rcvDays.adapter = DateDayAdapter(App.daysOfYear.value ?: listOf(Date.now())) {}
     }
 
     private fun setupTasksList() {

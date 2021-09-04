@@ -119,6 +119,17 @@ class Date{
                 else -> -1
             }
 
+    fun getSimpleDate():String{
+
+        var date:String = "$day"
+        var month:String = "$month"
+
+        if(day < 10) date = "0$day"
+        if(this.month < 10) month = "0$month"
+
+        return "$date/$month"
+    }
+
     override fun toString(): String {
         return "$day/$month/$year"
     }

@@ -16,6 +16,6 @@ class DateDayViewHolder(
     fun bind(item: Date, isSelected:Boolean){
 
         binding.dateTitle.text = item.getWeekBraziliamName()
-        binding.dateDay.text = "${item.day}/${item.month}"
+        binding.dateDay.text = item.getSimpleDate()
     }
 }
