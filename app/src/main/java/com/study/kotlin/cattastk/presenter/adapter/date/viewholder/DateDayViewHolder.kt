@@ -23,4 +23,10 @@ class DateDayViewHolder(
         binding.dateDay.setTextColor(Color.WHITE)
         binding.dateTitle.setTextColor(Color.WHITE)
     }
+
+    private fun setLightTheme() {
+        binding.dateDayBackground.setBackgroundColor(Color.WHITE)
+        binding.dateDay.setTextColor(Color.BLACK)
+        binding.dateTitle.setTextColor(Color.BLACK)
+    }
 }
