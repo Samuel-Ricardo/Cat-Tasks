@@ -3,6 +3,7 @@ package com.study.kotlin.cattastk.data.repositories
 import androidx.lifecycle.LiveData
 import com.study.kotlin.cattastk.data.database.dao.TaskDAO
 import com.study.kotlin.cattastk.data.entity.Task
+import com.study.kotlin.cattastk.domain.model.Date
 import com.study.kotlin.cattastk.interfaces.TasksDAO
 import com.study.kotlin.cattastk.interfaces.TasksRepository
 import kotlinx.coroutines.Dispatchers
@@ -26,4 +27,8 @@ class TaskRepository(private val DAO: TasksDAO): TasksRepository {
     }
 
     override  fun getAll() = DAO.getAll()
+
+    override fun getTodayTasks(selectedDate: Date): LiveData<List<Task>> {
+        return DAO.getTodayTasks(selectedDate)
+    }
 }
