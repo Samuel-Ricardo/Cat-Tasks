@@ -129,7 +129,7 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     <include
-        android:id="@+id/empty_state"
+        android:id="@+id/notes_editor"
         layout="@layout/notes_editor"
 
         android:layout_width="match_parent"

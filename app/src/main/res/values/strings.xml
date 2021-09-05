@@ -14,4 +14,6 @@
     <string name="label_you_dont_have_tasks">"Opa! Parece que Hoje é dia de prequicinha, sem atividades pra hoje "</string>
     <string name="app_desc">"Aplicativo minimalista aliado da produtividade, tão simples que até seu gatinho vai se organizar e levantar da cama"</string>
     <string name="notes">Anotações</string>
+    <string name="notes_editor_title">Editor de Notas</string>
+    <string name="lbl_save_updates">Salvar Alterações</string>
 </resources>
