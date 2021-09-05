@@ -56,14 +56,22 @@ class AddTaskActivity : AppCompatActivity() {
        }
 
         binding.btnSaveTask.setOnClickListener {
-            viewModel.insert(generateTask())
-            setResult(Activity.RESULT_OK)
-            Toast.makeText(
-                this,
-                "Tarefa Agendada",
-                Toast.LENGTH_LONG
-            ).show()
-            finish()
+            if(viewModel.insert(generateTask())){
+                Toast.makeText(
+                    this,
+                    "Tarefa Agendada",
+                    Toast.LENGTH_LONG
+                ).show()
+                finish()
+            }else{
+                Toast.makeText(
+                    this,
+                    "Não foi possivel agendar a tarefa",
+                    Toast.LENGTH_LONG
+                ).show()
+        }
+            //setResult(Activity.RESULT_OK)
+
         }
 
         binding.inputDate.editText?.setOnClickListener{
@@ -97,7 +105,7 @@ class AddTaskActivity : AppCompatActivity() {
 
     private fun generateTask(): Task {
         return Task(
-            id = -1,
+            id = 0,
             title = textOf(binding.inputTitle),
             notes = textOf(binding.inputNotes),
             date = textOf(binding.inputDate),

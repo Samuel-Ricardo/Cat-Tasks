@@ -18,7 +18,7 @@ interface TaskDAO: TasksDAO {
     @Query("SELECT * FROM Task WHERE id = :task_id")
     override fun select(task_id:Int): LiveData<List<Task>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     override suspend fun insert(task: Task)
 
     @Update

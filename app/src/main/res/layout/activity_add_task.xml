@@ -116,6 +116,8 @@
             android:text="@string/lbl_save_task"
             android:textAllCaps="false"
             app:cornerRadius="24dp"
+            android:layout_marginTop="40dp"
+            app:layout_goneMarginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -3,6 +3,7 @@ package com.study.kotlin.cattastk.presenter.ui.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.databinding.ActivityHomeBinding
@@ -59,7 +60,7 @@ class Home : AppCompatActivity() {
         }
 
         binding.rcvDays.adapter = adapter
-        binding.rcvDays.layoutManager!!.scrollToPosition(Date.now().dayOfYear())
+        binding.rcvDays.layoutManager!!.scrollToPosition(Date.now().dayOfYear()-1)
     }
 
     private fun setupTasksList(selectedDate: Date) {
@@ -71,8 +72,9 @@ class Home : AppCompatActivity() {
 
         val allTasks = viewModel.getAll();
 
-        viewModel.getTodayTasks(selectedDate).observe(this, {task ->
-            taskAdapter.updateList(task, selectedDate)
+        viewModel.getTodayTasks(selectedDate).observe(this, {tasks ->
+            binding.emptyState.emptyState.visibility = if(tasks.isEmpty()) View.VISIBLE else View.GONE
+            taskAdapter.updateList(tasks, selectedDate)
         })
     }
 }

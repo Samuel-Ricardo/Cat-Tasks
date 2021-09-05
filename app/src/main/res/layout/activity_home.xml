@@ -65,12 +65,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rcvDays" />
-
+<ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tasks_title"
+    >
     <include
-        android:id="@+id/include_empty_tasks"
+        android:id="@+id/empty_state"
         layout="@layout/empty_tasks"
-        />
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:visibility="gone"
+        />
+</ScrollView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvTasksList"
         android:layout_width="match_parent"
@@ -79,7 +91,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
         app:layout_constraintTop_toBottomOf="@+id/tasks_title"
         tools:layout_editor_absoluteX="16dp"
-        tools:listitem="@layout/task_layout" />
+        tools:listitem="@layout/task_layout"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_add_task"
