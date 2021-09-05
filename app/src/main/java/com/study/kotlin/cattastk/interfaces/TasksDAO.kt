@@ -6,7 +6,7 @@ import com.study.kotlin.cattastk.domain.model.Date
 
 interface TasksDAO {
 
-    fun select(task_id:Int): LiveData<List<Task>>
+    fun select(task_id:Int): LiveData<Task>
 
     fun getAll(): LiveData<List<Task>>
 

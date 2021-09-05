@@ -22,7 +22,7 @@ class TaskRepository(private val DAO: TasksDAO): TasksRepository {
         DAO.update(task);
     }
 
-    override fun select(task_id: Int): LiveData<List<Task>> {
+    override fun select(task_id: Int): LiveData<Task> {
        return DAO.select(task_id)
     }
 

@@ -41,6 +41,6 @@ class TaskUseCase(
 
         //val value = task.value
 
-        return task.value?.isNotEmpty() ?: false;
+        return task.value == null;
     }
 }

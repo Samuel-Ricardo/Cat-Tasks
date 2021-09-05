@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.study.kotlin.cattastk.App
 import com.study.kotlin.cattastk.data.entity.Task
@@ -29,10 +30,7 @@ class Home : AppCompatActivity() {
             TaskUseCase((application as App).repository)
         )
     }
-    val taskAdapter by lazy {TaskAdapter(Date.now(), {task ->
-                setupNotesEditor(task)
-            }
-        }
+    val taskAdapter by lazy {TaskAdapter(Date.now()) {task -> setupNotesEditor(task)}}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +40,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun setup() {
+        binding.notesEditor.notesEditor.visibility = View.GONE
         setupLists();
         setupListeners()
     }
@@ -65,7 +64,7 @@ class Home : AppCompatActivity() {
         }
 
         binding.rcvDays.adapter = adapter
-        binding.rcvDays.layoutManager!!.scrollToPosition(Date.now().dayOfYear()-1)
+        binding.rcvDays.layoutManager!!.scrollToPosition(Date.now().dayOfYear()-31)
     }
 
     private fun setupTasksList(selectedDate: Date) {
@@ -85,7 +84,21 @@ class Home : AppCompatActivity() {
             task.title = binding.notesEditor.titleUpdate.text
             task.notes = binding.notesEditor.notesUpdate.text
 
-            viewModel.insert(task) }
+            if (viewModel.insert(task)){
+                Toast.makeText(
+                    this,
+                    "Alterações salvas com sucesso",
+                    Toast.LENGTH_LONG
+                )
+                binding.notesEditor.notesEditor.visibility = View.GONE
+            }else{
+                Toast.makeText(
+                    this,
+                    "Não foi possivel salvar as alterações",
+                    Toast.LENGTH_LONG
+                )
+            }
+        }
     }
 
 

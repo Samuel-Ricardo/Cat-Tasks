@@ -11,7 +11,7 @@ interface TasksRepository{
 
     fun update(task: Task)
 
-    fun select(task_id:Int): LiveData<List<Task>>
+    fun select(task_id:Int): LiveData<Task>
 
     fun getAll() : LiveData<List<Task>>
 
