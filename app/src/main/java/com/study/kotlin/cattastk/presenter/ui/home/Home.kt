@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import com.study.kotlin.cattastk.App
+import com.study.kotlin.cattastk.data.entity.Task
 import com.study.kotlin.cattastk.databinding.ActivityHomeBinding
 import com.study.kotlin.cattastk.domain.TaskUseCase
 import com.study.kotlin.cattastk.domain.model.Date
@@ -14,6 +15,7 @@ import com.study.kotlin.cattastk.presenter.adapter.task.TaskAdapter
 import com.study.kotlin.cattastk.presenter.ui.task.create.AddTaskActivity
 import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
+import com.study.kotlin.cattastk.util.text
 
 class Home : AppCompatActivity() {
 
@@ -27,7 +29,10 @@ class Home : AppCompatActivity() {
             TaskUseCase((application as App).repository)
         )
     }
-    val taskAdapter by lazy {TaskAdapter(Date.now())}
+    val taskAdapter by lazy {TaskAdapter(Date.now(), {task ->
+                setupNotesEditor(task)
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +72,22 @@ class Home : AppCompatActivity() {
         binding.rcvTasksList.adapter = this.taskAdapter;
         updateTaskList(selectedDate);
     }
+
+    private fun setupNotesEditor(task: Task) {
+        binding.notesEditor.notesEditor.visibility = View.VISIBLE
+
+        binding.notesEditor.titleUpdate.text = task.title
+        binding.notesEditor.notesUpdate.text = task.notes
+
+        binding.notesEditor.imgCloseUpdateNotes.setOnClickListener { binding.notesEditor.notesEditor.visibility = View.GONE }
+        binding.notesEditor.btnUpdateNotes.setOnClickListener {
+
+            task.title = binding.notesEditor.titleUpdate.text
+            task.notes = binding.notesEditor.notesUpdate.text
+
+            viewModel.insert(task) }
+    }
+
 
     private fun updateTaskList(selectedDate: Date) {
 

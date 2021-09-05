@@ -83,6 +83,7 @@
         android:layout_height="wrap_content"
 
         tools:visibility="gone"
+        android:layout_marginBottom="400dp"
         />
 </ScrollView>
     <androidx.recyclerview.widget.RecyclerView
@@ -134,6 +135,6 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+    tools:visibility="gone"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

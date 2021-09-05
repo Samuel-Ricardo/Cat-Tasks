@@ -8,8 +8,8 @@ import java.time.LocalTime
 @Entity
 data class Task (
     @PrimaryKey(autoGenerate = true) val id:Int = 0,
-    val title:String,
-    val notes:String,
-    val date:String,
-    val time:String,
+    var title:String,
+    var notes:String,
+    var date:String,
+    var time:String,
 )
