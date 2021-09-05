@@ -31,4 +31,8 @@ class TaskRepository(private val DAO: TasksDAO): TasksRepository {
     override fun getTodayTasks(selectedDate: Date): LiveData<List<Task>> {
         return DAO.getTodayTasks(selectedDate.toString())
     }
+
+    override fun delete(task: Task) {
+        return DAO.delete(task)
+    }
 }

@@ -53,4 +53,8 @@ class TaskUseCase(
             false;
         }
     }
+
+    fun delete(task: Task) {
+        repository.delete(task)
+    }
 }

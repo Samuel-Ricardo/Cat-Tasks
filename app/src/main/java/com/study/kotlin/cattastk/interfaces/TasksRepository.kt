@@ -17,4 +17,5 @@ interface TasksRepository{
 
     fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>
 
+    fun delete(task: Task)
 }

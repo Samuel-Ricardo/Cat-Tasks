@@ -21,6 +21,9 @@ interface TaskDAO: TasksDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     override suspend fun insert(task: Task)
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE , entity = Task::class)
     override fun update(task: Task)
+
+    @Delete(entity = Task::class)
+    override fun delete(task: Task)
 }

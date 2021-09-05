@@ -27,4 +27,8 @@ class MainViewModel (
     fun update(task: Task): Boolean {
         return taskUseCase.update(task)
     }
+
+    fun delete(task: Task) {
+        return taskUseCase.delete(task)
+    }
 }

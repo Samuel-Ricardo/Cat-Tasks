@@ -49,6 +49,17 @@ class Home : AppCompatActivity() {
         binding.btnAddTask.setOnClickListener {
             startActivity(Intent(this,  AddTaskActivity::class.java))
         }
+
+
+        taskAdapter.listenerEdit = {
+            val intent = Intent(this, AddTaskActivity::class.java)
+            intent.putExtra(AddTaskActivity.TASK_ID, it.id)
+        }
+
+        taskAdapter.listenerDelete = {
+            viewModel.delete(it)
+            setupTasksList(Date.now())
+        }
     }
 
     private fun setupLists() {
