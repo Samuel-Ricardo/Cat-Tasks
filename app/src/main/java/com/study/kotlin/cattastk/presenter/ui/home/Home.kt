@@ -107,7 +107,13 @@ class Home : AppCompatActivity() {
         val allTasks = viewModel.getAll();
 
         viewModel.getTodayTasks(selectedDate).observe(this, {tasks ->
-            binding.emptyState.emptyState.visibility = if(tasks.isEmpty()) View.VISIBLE else View.GONE
+             if(tasks.isEmpty()){
+                 binding.emptyState.emptyState.visibility = View.VISIBLE
+                 binding.rcvTasksList.visibility = View.GONE
+            } else{
+                 binding.emptyState.emptyState.visibility = View.GONE
+                 binding.rcvTasksList.visibility = View.VISIBLE
+             }
             taskAdapter.updateList(tasks, selectedDate)
         })
     }

@@ -16,4 +16,6 @@
     <string name="notes">Anotações</string>
     <string name="notes_editor_title">Editor de Notas</string>
     <string name="lbl_save_updates">Salvar Alterações</string>
+    <string name="lbl_edit">Editar</string>
+    <string name="lbl_delete">Deletar</string>
 </resources>

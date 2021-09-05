@@ -12,7 +12,7 @@ class TaskUseCase(
 
     fun insert(task: Task): Boolean {
 
-        try {
+        return try {
 
             if(exists(task)){
                 repository.update(task)
@@ -20,10 +20,10 @@ class TaskUseCase(
                 repository.insert(task)
             }
 
-            return true;
+            true;
         }catch (ex: Exception){
             ex.printStackTrace();
-            return false;
+            false;
         }
     }
 
@@ -39,8 +39,18 @@ class TaskUseCase(
 
         val task = repository.select(task.id)
 
-        //val value = task.value
+        val value = task.value
 
-        return task.value == null;
+        return task.value != null;
+    }
+
+    fun update(task: Task): Boolean {
+        return try {
+            repository.update(task)
+            true;
+        }catch (ex: Exception){
+            ex.printStackTrace();
+            false;
+        }
     }
 }

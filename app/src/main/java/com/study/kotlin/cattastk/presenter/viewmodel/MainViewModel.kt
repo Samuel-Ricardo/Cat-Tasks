@@ -23,4 +23,8 @@ class MainViewModel (
     fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>{
         return taskUseCase.getTodayTasks(selectedDate)
     }
+
+    fun update(task: Task): Boolean {
+        return taskUseCase.update(task)
+    }
 }
