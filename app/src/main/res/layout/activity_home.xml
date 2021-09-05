@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presenter.ui.home.Home">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="40dp"
@@ -125,4 +127,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_cat" />
 
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/empty_tasks"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
