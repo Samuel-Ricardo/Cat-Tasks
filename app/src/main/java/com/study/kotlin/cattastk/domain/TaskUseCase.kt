@@ -13,13 +13,7 @@ class TaskUseCase(
     fun insert(task: Task): Boolean {
 
         return try {
-
-            if(exists(task)){
-                repository.update(task)
-            }else{
-                repository.insert(task)
-            }
-
+            repository.insert(task)
             true;
         }catch (ex: Exception){
             ex.printStackTrace();
@@ -27,22 +21,17 @@ class TaskUseCase(
         }
     }
 
-    fun getAll(): LiveData<List<Task>> {
-        return repository.getAll()
-    }
+    fun getAll(): LiveData<List<Task>> = repository.getAll()
 
-    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>> {
-        return repository.getTodayTasks(selectedDate);
-    }
+    fun getTodayTasks(selectedDate: Date): LiveData<List<Task>> = repository.getTodayTasks(selectedDate);
 
-    fun exists(task: Task):Boolean {
+    fun ifExistsDo(task: Task, action: ((Task) -> Unit)) = repository.select(task.id).observeForever{ action(it) }
+/*
+    //     val task = repository.select(task.id)
 
-        val task = repository.select(task.id)
-
-        val value = task.value
-
-        return task.value != null;
-    }
+   //     return task.observeForever { task -> return@observeForever (task != null) as Unit; } as Boolean
+  //  }
+*/
 
     fun update(task: Task): Boolean {
         return try {

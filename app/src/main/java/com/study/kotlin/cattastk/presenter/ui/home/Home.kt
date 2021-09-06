@@ -87,6 +87,8 @@ class Home : AppCompatActivity() {
     private fun setupNotesEditor(task: Task) {
         binding.notesEditor.notesEditor.visibility = View.VISIBLE
 
+        binding.notesEditor.notesEditToolbar.subtitle = task.time
+
         binding.notesEditor.titleUpdate.text = task.title
         binding.notesEditor.notesUpdate.text = task.notes
 

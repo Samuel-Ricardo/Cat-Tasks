@@ -78,7 +78,7 @@ class AddTaskActivity : AppCompatActivity() {
                     "Tarefa Agendada",
                     Toast.LENGTH_LONG
                 ).show()
-                finish()
+                startActivity(Intent(this, Home::class.java))
             }else{
                 Toast.makeText(
                     this,
