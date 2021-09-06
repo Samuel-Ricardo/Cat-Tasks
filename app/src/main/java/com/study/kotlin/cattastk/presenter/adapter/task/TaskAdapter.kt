@@ -26,7 +26,8 @@ class TaskAdapter(
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
 
-        holder.bind(getItem(position), onClick)
+        holder.bind(
+            getItem(position), onClick, this)
     }
 
     fun updateList(list: List<Task>, selectedDay: Date) {
