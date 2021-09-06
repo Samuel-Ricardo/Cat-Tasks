@@ -8,15 +8,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/rcvTasksList"
         app:layout_constraintEnd_toStartOf="@+id/tasks_title"
         app:layout_constraintTop_toBottomOf="@+id/rcvDays"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/tasks_title"
         app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/rcvTasksList"
+        app:layout_constraintBottom_toBottomOf="@+id/tasks_title"
         app:layout_constraintStart_toEndOf="@+id/tasks_title"
         app:layout_constraintTop_toBottomOf="@+id/rcvDays"
         app:srcCompat="@drawable/ic_cat_in_black_silhouette" />
@@ -67,25 +67,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rcvDays" />
-<ScrollView
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tasks_title"
-    >
-    <include
-        android:id="@+id/empty_state"
-        layout="@layout/empty_tasks"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasks_title">
 
-        tools:visibility="gone"
-        android:layout_marginBottom="400dp"
-        />
-</ScrollView>
+        <include
+            android:id="@+id/empty_state"
+            layout="@layout/empty_tasks"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="400dp"
+            tools:visibility="gone" />
+    </ScrollView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvTasksList"
         android:layout_width="match_parent"

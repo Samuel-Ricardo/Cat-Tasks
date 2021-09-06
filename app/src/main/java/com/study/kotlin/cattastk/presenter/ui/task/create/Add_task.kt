@@ -56,21 +56,14 @@ class AddTaskActivity : AppCompatActivity() {
 
     private fun setupNote() {
 
-        runBlocking {
-            launch (Dispatchers.IO){
-
                 val task_id = intent.getIntExtra(TASK_ID, 0)
 
-                val tasks = viewModel.getAll().value
-
-                val task = tasks?.filter { item -> item.id == task_id }?.get(0)
-
-                binding.inputTitle.text = task?.title ?: "Não encontrado"
-                binding.inputNotes.text = task?.notes ?: ""
-                binding.inputDate.text = task?.date ?: ""
-                binding.inputTime.text = task?.time ?: ""
-            }
-        }
+                 viewModel.select(task_id).observe(this, {task ->
+                     binding.inputTitle.text = task?.title ?: ""
+                     binding.inputNotes.text = task?.notes ?: ""
+                     binding.inputDate.text = task?.date ?: ""
+                     binding.inputTime.text = task?.time ?: ""
+                })
     }
 
     private fun setupListener() {

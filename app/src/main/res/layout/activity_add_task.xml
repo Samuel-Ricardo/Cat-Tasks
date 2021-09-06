@@ -8,12 +8,23 @@
     tools:context=".presenter.ui.task.create.AddTaskActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presenter.ui.task.create.AddTaskActivity">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save_task"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_workspace_black" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/home_toolbar"
@@ -111,18 +122,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="16dp"
             android:text="@string/lbl_save_task"
             android:textAllCaps="false"
             app:cornerRadius="24dp"
-            android:layout_marginTop="40dp"
-            app:layout_goneMarginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_time"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_goneMarginBottom="20dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
