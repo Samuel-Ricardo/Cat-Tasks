@@ -54,6 +54,7 @@ class Home : AppCompatActivity() {
         taskAdapter.listenerEdit = {
             val intent = Intent(this, AddTaskActivity::class.java)
             intent.putExtra(AddTaskActivity.TASK_ID, it.id)
+            startActivity(intent)
         }
 
         taskAdapter.listenerDelete = {

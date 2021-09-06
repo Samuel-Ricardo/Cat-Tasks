@@ -9,7 +9,7 @@ interface TasksRepository{
 
     fun insert(task: Task): Job
 
-    fun update(task: Task)
+    fun update(task: Task): Job
 
     fun select(task_id:Int): LiveData<Task>
 
@@ -17,5 +17,5 @@ interface TasksRepository{
 
     fun getTodayTasks(selectedDate: Date): LiveData<List<Task>>
 
-    fun delete(task: Task)
+    fun delete(task: Task): Job
 }

@@ -31,4 +31,8 @@ class MainViewModel (
     fun delete(task: Task) {
         return taskUseCase.delete(task)
     }
+
+    fun select(task_id:Int): LiveData<Task> {
+        return taskUseCase.select(task_id)
+    }
 }

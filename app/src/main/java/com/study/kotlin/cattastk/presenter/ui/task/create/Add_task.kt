@@ -25,6 +25,9 @@ import com.study.kotlin.cattastk.presenter.viewmodel.MainViewModel
 import com.study.kotlin.cattastk.presenter.viewmodel.factory.MainViewModelFactory
 import com.study.kotlin.cattastk.util.format
 import com.study.kotlin.cattastk.util.text
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.time.LocalDate
 import java.util.*
 
@@ -48,6 +51,26 @@ class AddTaskActivity : AppCompatActivity() {
     private fun setup() {
         setupPermissions()
         setupListener()
+        setupNote()
+    }
+
+    private fun setupNote() {
+
+        runBlocking {
+            launch (Dispatchers.IO){
+
+                val task_id = intent.getIntExtra(TASK_ID, 0)
+
+                val tasks = viewModel.getAll().value
+
+                val task = tasks?.filter { item -> item.id == task_id }?.get(0)
+
+                binding.inputTitle.text = task?.title ?: "Não encontrado"
+                binding.inputNotes.text = task?.notes ?: ""
+                binding.inputDate.text = task?.date ?: ""
+                binding.inputTime.text = task?.time ?: ""
+            }
+        }
     }
 
     private fun setupListener() {
@@ -105,7 +128,7 @@ class AddTaskActivity : AppCompatActivity() {
 
     private fun generateTask(): Task {
         return Task(
-            id = 0,
+            id = intent.getIntExtra(TASK_ID, 0),
             title = textOf(binding.inputTitle),
             notes = textOf(binding.inputNotes),
             date = textOf(binding.inputDate),

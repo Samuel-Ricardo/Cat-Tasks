@@ -57,4 +57,6 @@ class TaskUseCase(
     fun delete(task: Task) {
         repository.delete(task)
     }
+
+    fun select(task_id:Int) = repository.select(task_id)
 }

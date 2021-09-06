@@ -18,8 +18,10 @@ class TaskRepository(private val DAO: TasksDAO): TasksRepository {
         }
     }
 
-    override fun update(task: Task){
+    override fun update(task: Task) = runBlocking {
+        launch (Dispatchers.IO){
         DAO.update(task);
+        }
     }
 
     override fun select(task_id: Int): LiveData<Task> {
@@ -32,7 +34,9 @@ class TaskRepository(private val DAO: TasksDAO): TasksRepository {
         return DAO.getTodayTasks(selectedDate.toString())
     }
 
-    override fun delete(task: Task) {
-        return DAO.delete(task)
+    override fun delete(task: Task)= runBlocking {
+        launch (Dispatchers.IO){
+            DAO.delete(task)
+      }
     }
 }
