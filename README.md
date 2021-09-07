@@ -51,7 +51,7 @@
   
  <br>
  <p align='justfy'>
-  Minimalist application made with native kotlin, the Cat Task is an app for personal organization through the planning of Tasks.
+  Minimalist offline first application made with native kotlin using the MVVM architecture, the Cat Task is an app for personal organization through the planning of Tasks.
 </p>
 
 <p align='justfy'>
@@ -107,8 +107,14 @@ the user creates a task that has a title, a notepad attached and the date and ti
 <br>
 <br>
   
+<h2 id="app">
+   📱 Application
+</h2>
   
-  
+  <h3> Storage </h3>
+  <p>
+    it was decided that the method to store information would be locally, that is, it is an offline first application, for this the android default option, the  SQLite Database and the Room library was chosen, Room is responsible for abstracting and facilitating the use of SQLite on android .
+  </p>
   
 </br>
 </br>
