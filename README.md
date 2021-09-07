@@ -61,13 +61,13 @@ the user creates a task that has a title, a notepad attached and the date and ti
 <p>
  By clicking on the task the user can change its content with a note editor, to remark just click on the "more" icon - (3 vertical points) which will open a menu where the user can do a complete edit or delete task
 </p>
+  
+  
   <br>
   
-  <p> Be productive </p>
-
+   __*Be productive*__ 
   
-   
- > <p align = 'center'>
+ <p align = 'center'>
   <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor_03.jpeg'>
   <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor.jpeg'>
  </p>
@@ -75,6 +75,37 @@ the user creates a task that has a title, a notepad attached and the date and ti
   
   <br>
 
+  
+<h2 id="techs">
+   :building_construction: Technologies and Concepts Studied
+</h2>
+
+- Android
+- Kotlin
+- lifecycle
+- MVVM
+- view binding
+- Room Database
+- SQLite Database
+- Google Material
+- Async Programing
+- Multi thread
+- Menu Popup
+- Navigate into Activities
+- Dates
+- Time
+- Calendar 
+- Recyclerview
+- overlap of view and activities 
+- include
+- update screen in real time
+- update data in real time
+- app real time communication
+- kapt
+- Among Others...
+  
+<br>
+<br>
   
   
   
