@@ -74,6 +74,7 @@
   
  > <a href='https://www.linkedin.com/in/samuel-ricardo-cabral/'> <img width='500px' src='https://github.com/Samuel-Ricardo/BioMisa-Site/blob/master/readme_files/Samuel-Card.jpeg'> </br> <p><b>   Samuel Ricardo</b></p> </a>
 
+<h1/>
 
 <h1>
   <a herf='https://github.com/Samuel-Ricardo'>
