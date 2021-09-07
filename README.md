@@ -98,6 +98,7 @@ the user creates a task that has a title, a notepad attached and the date and ti
 - Recyclerview
 - overlap of view and activities 
 - include
+- SVG and Vector Images
 - update screen in real time
 - update data in real time
 - app real time communication
@@ -111,10 +112,40 @@ the user creates a task that has a title, a notepad attached and the date and ti
    📱 Application
 </h2>
   
-  <h3> Storage </h3>
+  <h3> :card_index_dividers: Storage </h3>
   <p>
     it was decided that the method to store information would be locally, that is, it is an offline first application, for this the android default option, the  SQLite Database and the Room library was chosen, Room is responsible for abstracting and facilitating the use of SQLite on android .
   </p>
+
+  <h3> :calendar: Calendar </h3>
+  <p>
+    I had problems working with the dates because the solutions that were available like LocalStorage needed a very high API around 26 or higher, as I don't have an android with this api, I was forced to create my own solution, from this project I created a class to work with dates and another to work with hours and minutes that works on older versions of android, as I had limited time I couldn't make the ideal class, there's still a lot that can be added, which means that from this project, i intend to create a library to work with dates in older android versions.
+  </p>
+  
+  <h3> Initial Screen </h3>
+   > <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/initial_screen.jpeg'>
+  <p>
+    The initial screen that introduces the App
+  </p>
+  
+  
+  <h3> Home Screen </h3>
+  <p align="center">
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_08.jpeg'>
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_empty_task.jpeg'>
+    <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_empty_task_02.jpeg'>
+</p>
+  
+  - The Home Screen has a Calendar with all the days of the year, it was built using a horizontal Recyclerview.
+  
+  - As soon as the application starts, it identifies the current year and generates a calendar with all the days and months of the year.
+  
+  - As soon as the homescreen opens, the app identifies what day it is and loads all the tasks for that day and automatically selects today's day in the calendar.
+  
+  - If you don't have tasks scheduled for the selected day, the background changes to a custom message
+  
+  
+  
   
 </br>
 </br>
