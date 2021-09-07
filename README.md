@@ -123,7 +123,9 @@ the user creates a task that has a title, a notepad attached and the date and ti
     I had problems working with the dates because the solutions that were available like LocalStorage needed a very high API around 26 or higher, as I don't have an android with this api, I was forced to create my own solution, from this project I created a class to work with dates and another to work with hours and minutes that works on older versions of android, as I had limited time I couldn't make the ideal class, there's still a lot that can be added, which means that from this project, i intend to create a library to work with dates in older android versions.
   </p>
   
+  
   <br>
+  
   
 <h3> Initial Screen </h3>
   
@@ -133,7 +135,9 @@ the user creates a task that has a title, a notepad attached and the date and ti
   The initial screen that introduces the App
 </p>
   
+  
   <br>
+  
   
 <h3> Home Screen </h3>
 <p align="center">
@@ -150,7 +154,30 @@ the user creates a task that has a title, a notepad attached and the date and ti
   
   - If you don't have tasks scheduled for the selected day, the background changes to a custom message
 
+  
   <br>
+  
+  <h3> Notepad Editor </h3>  
+ <p align="center">
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_05.jpeg'>
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor_03.jpeg'>
+</p>
+  
+-  <p>
+  When displaying a task it will be in a reduced mode, where if the annotations exceed the maximum number of characters, it will be cut and put "..." To see it completely, it is necessary to click on it.
+  </p>
+  
+-  <p>
+  When the user touchs on a task it will open a note editor for him to make the changes he wants. Notepad size adapts the number of characters dynamically, changing its size.
+  </p>
+  
+-  <p>
+  to reschedule just click on the "more" icon - (3 vertical points) which will open a menu where it will be possible to complete editing or delete the task
+  </p>
+    
+  
+  <br>
+  
   
   <h3> Create / Update Task </h3>
 <p align="center">
