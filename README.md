@@ -43,7 +43,7 @@
 
 <h2> :artificial_satellite: About </h2>
 
- <h5> This project was created during mobile bootcamp in <a href='https://www.instagram.com/digitalinnovation.one/'>@Digital_Innovation.one<a> </h5>
+ <h5> This project was created during mobile bootcamp in <a href='https://www.instagram.com/digitalinnovation.one/'>@Digital_Innovation.one<a> In partnership with <a href='https://www.becas-santander.com/pt_pt/index.html'>@Santander_Universities - Brazil<a> </h5> 
   
   - __*Download: [Cat Task](https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/apk/app-debug.apk) - (APK)*__
   
