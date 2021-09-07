@@ -81,6 +81,7 @@ the user creates a task that has a title, a notepad attached and the date and ti
 </h2>
 
 - Android
+- Responsive
 - Kotlin
 - lifecycle
 - MVVM
@@ -122,15 +123,20 @@ the user creates a task that has a title, a notepad attached and the date and ti
     I had problems working with the dates because the solutions that were available like LocalStorage needed a very high API around 26 or higher, as I don't have an android with this api, I was forced to create my own solution, from this project I created a class to work with dates and another to work with hours and minutes that works on older versions of android, as I had limited time I couldn't make the ideal class, there's still a lot that can be added, which means that from this project, i intend to create a library to work with dates in older android versions.
   </p>
   
-  <h3> Initial Screen </h3>
-   > <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/initial_screen.jpeg'>
-  <p>
-    The initial screen that introduces the App
-  </p>
+  <br>
   
+<h3> Initial Screen </h3>
   
-  <h3> Home Screen </h3>
-  <p align="center">
+ > <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/initial_screen.jpeg'/>
+
+<p>
+  The initial screen that introduces the App
+</p>
+  
+  <br>
+  
+<h3> Home Screen </h3>
+<p align="center">
   <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_08.jpeg'>
   <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_empty_task.jpeg'>
     <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/home_screen_empty_task_02.jpeg'>
@@ -143,7 +149,32 @@ the user creates a task that has a title, a notepad attached and the date and ti
   - As soon as the homescreen opens, the app identifies what day it is and loads all the tasks for that day and automatically selects today's day in the calendar.
   
   - If you don't have tasks scheduled for the selected day, the background changes to a custom message
+
+  <br>
   
+  <h3> Create / Update Task </h3>
+<p align="center">
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task.jpeg'>
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_02.jpeg'>
+</p>
+  
+- <p> This screen is for creating a new task or updating an existing task. </p> 
+
+<p align="center">
+  <img width="250px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_datapicker.jpeg'>
+  <img width="250px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_datapicker_02.jpeg'>
+  <img width="250px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_datapicker_03.jpeg'>
+</p>
+  
+ - <p> It has a Datepicker where you can choose the year, month and day </p> 
+  
+ <p align="center">
+  <img width="250px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_timepicker.jpeg'>
+  <img width="250px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_timepicker_02.jpeg'>
+</p>
+  
+- <p> It has a Timepicker where you can choose the time of day (24hr) and the minute </p>
+
   
   
   
