@@ -13,8 +13,7 @@
   |&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#techs">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#collab">Collab</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#run-project">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#app">App</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#author">Author</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -44,18 +43,34 @@
 
 <h2> :artificial_satellite: About </h2>
 
- <h5> This project was created during mobile bootcamp in <a href='https://www.instagram.com/misaellimajr/'>@Digital_Innovation.one<a> </h5>
+ <h5> This project was created during mobile bootcamp in <a href='https://www.instagram.com/digitalinnovation.one/'>@Digital_Innovation.one<a> </h5>
   
   - __*Download: [Cat Task](https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/apk/app-debug.apk) - (APK)*__
+  
+  - Current Version: <b> 1.0.0 </b> 
+  
+ <br>
+ <p align='justfy'>
+  Minimalist application made with native kotlin, the Cat Task is an app for personal organization through the planning of Tasks.
+</p>
+
+<p align='justfy'>
+the user creates a task that has a title, a notepad attached and the date and time of the task, and has access to a calendar in the app's home where you can select the day of the year and see the tasks scheduled for that day, if don't have none, the background changes to a custom one.
+</p>
+
+<p>
+ By clicking on the task the user can change its content with a note editor, to remark just click on the "more" icon - (3 vertical points) which will open a menu where the user can do a complete edit or delete task
+</p>
+  <br>
   
   <p> Be productive </p>
 
   
-  > 
-  <p align = 'center'>
-    <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor_03.jpeg'>
-    <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor.jpeg'>
-  </p>
+   
+ > <p align = 'center'>
+  <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor_03.jpeg'>
+  <img width='300px' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor.jpeg'>
+ </p>
 
   
   <br>
