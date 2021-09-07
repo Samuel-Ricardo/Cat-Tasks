@@ -31,6 +31,7 @@
 
             app:navigationIcon="@drawable/ic_edit_black_24dp"
             app:title="@string/notes_editor_title"
+            app:subtitle="15:45"
             tools:layout_editor_absoluteX="57dp">
 
         </com.google.android.material.appbar.MaterialToolbar>
