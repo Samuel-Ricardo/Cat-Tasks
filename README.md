@@ -163,16 +163,13 @@ the user creates a task that has a title, a notepad attached and the date and ti
   <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/notes_editor_03.jpeg'>
 </p>
   
--  <p>
-  When displaying a task it will be in a reduced mode, where if the annotations exceed the maximum number of characters, it will be cut and put "..." To see it completely, it is necessary to click on it.
+-  <p> When displaying a task it will be in a reduced mode, where if the annotations exceed the maximum number of characters, it will be cut and put "..." To see it completely, it is necessary to click on it.
   </p>
   
--  <p>
-  When the user touchs on a task it will open a note editor for him to make the changes he wants. Notepad size adapts the number of characters dynamically, changing its size.
+-  <p> When the user touchs on a task it will open a note editor for him to make the changes he wants. Notepad size adapts the number of characters dynamically, changing its size.
   </p>
   
--  <p>
-  to reschedule just click on the "more" icon - (3 vertical points) which will open a menu where it will be possible to complete editing or delete the task
+-  <p> to reschedule just click on the "more" icon - (3 vertical points) which will open a menu where it will be possible to complete editing or delete the task
   </p>
     
   
@@ -183,6 +180,7 @@ the user creates a task that has a title, a notepad attached and the date and ti
 <p align="center">
   <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task.jpeg'>
   <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_02.jpeg'>
+  <img width="300px"  align='center' src='https://github.com/Samuel-Ricardo/Cat-Tasks/blob/master/readme_files/create_task_03.jpeg'>
 </p>
   
 - <p> This screen is for creating a new task or updating an existing task. </p> 
