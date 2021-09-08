@@ -85,6 +85,8 @@ the user creates a task that has a title, a notepad attached and the date and ti
 - Kotlin
 - lifecycle
 - MVVM
+- OOP
+- Functional Programing
 - view binding
 - Room Database
 - SQLite Database
